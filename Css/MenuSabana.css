@@ -1,5 +1,5 @@
 body {
-    background-image: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/background2.jpeg');
+    background-image: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Imagenes de fondo/2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -139,26 +139,40 @@ p {
     margin-right: -120px; 
 }
 
-.mySwiper {
+.row {
     display: flex;
-    overflow: hidden;
+    justify-content: space-between;
 }
 
-.swiper-slide {
-    width: 300px;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.959);
-    margin-right: 20px;
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
+.column {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
 }
 
-.swiper-slide img {
-    max-width: 70%; /* Ajuste máximo del ancho */
-    max-height: 40%; /* Ajuste máximo de la altura */
-    display: block;
-    margin: auto;
+.image-container {
+     background-image: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Carrusel/1.png'); 
+    background-size: cover; 
+     background-repeat: no-repeat; 
+     background-position: center center; 
+   
 }
 
+.menu-container {
+    /* Estilos para el menú desplegable */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    /* Estilos para cada elemento del menú */
+    background-color: #8EB523;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
 .product-txt {
     text-align: left; /* Cambia la alineación del texto a la izquierda */
     margin-top: 20px;
