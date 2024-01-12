@@ -273,7 +273,7 @@ h3 {
     display: none;
     /* Inicialmente oculto */
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     /* Ajusta según sea necesario */
     right: 20px;
     width: 300px;

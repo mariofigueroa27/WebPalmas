@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Palmas BI</title>
-    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css\MenuReporte.css">
+    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css\MenuNprint.css">
 </head>
 
 <body style="
-            background-image: url('https://palmasbiweb.surge.sh/Img/Imagenes de fondo/2.jpg');
+            background-image: url('https://palmasbiweb.surge.sh/Img/Imagenes de fondo/Imagenes de fondo.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             margin: 0;
+            overflow: hidden;
             background-color: rgba(255, 255, 255, 0.5);
         ">
 
@@ -47,175 +48,227 @@
                     alt="Descripción de la imagen">
             </div>
 
-            <div class="column left-column">
-                <h2>Upstream</h2>
-                <div class="menu-container">
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Reportes Marketing</a>
-                        </div>
-                    </div>
-
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Reportes Comercial</a>
-                        </div>
-                    </div>
-
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Reportes Finanzas</a>
-                        </div>
-                    </div>
-
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
-            </div>
-
             <div class="column right-column">
-                <h2>Downstream</h2>
-                <div class="menu-container">
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Plantacion</a>
+                <div class="grid-container">
+                    <!-- Cuadro 1 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
                         </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
+                        <!-- Fin de la nueva sección -->
 
-                        </table>
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
                     </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Transporte</a>
+
+                    <!-- Cuadro 2 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
                         </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
+                        <!-- Fin de la nueva sección -->
 
-                        </table>
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
                     </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Industrial</a>
+
+                    <!-- Cuadro 3 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
                         </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
+                        <!-- Fin de la nueva sección -->
 
-                        </table>
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
                     </div>
+
+                    <!-- Repite este bloque según sea necesario -->
+
+                </div>
+
+                <div class="grid-container">
+                    <!-- Cuadro 1 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 2 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 3 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Repite este bloque según sea necesario -->
+
+                </div>
+
+                <div class="grid-container">
+                    <!-- Cuadro 1 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 2 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 3 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Repite este bloque según sea necesario -->
+
+                </div>
+
+                <div class="grid-container">
+                    <!-- Cuadro 1 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 2 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 3 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Repite este bloque según sea necesario -->
+
+                </div>
+
+                <div class="grid-container">
+                    <!-- Cuadro 1 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 2 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Cuadro 3 -->
+                    <div class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png"
+                                alt="Descripción de la imagen">
+                        </div>
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Contenido Cuadro</p>
+                    </div>
+
+                    <!-- Repite este bloque según sea necesario -->
+
                 </div>
             </div>
-
 
         </div>
 
@@ -269,47 +322,10 @@
         frameborder="0"></iframe>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var menuItems = document.querySelectorAll('.menu-item');
+            var gridItems = document.querySelectorAll('.grid-item');
 
-            function closeAllTables() {
-                menuItems.forEach(function (menuItem) {
-                    menuItem.classList.remove('active');
-                    var table = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
-                    if (table && table.classList.contains('custom-table')) {
-                        table.style.maxHeight = '0'; // Oculta la tabla
-                        table.style.opacity = '0'; // Opacidad inicial
-                    }
-                });
-            }
-
-            function toggleTable(menuItem) {
-                var tableDetails = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
-                var isActive = menuItem.classList.contains('active');
-
-                closeAllTables();
-
-                if (!isActive) {
-                    menuItem.classList.add('active');
-                    if (tableDetails && tableDetails.classList.contains('custom-table')) {
-                        tableDetails.style.maxHeight = '1000px'; // Muestra la tabla
-                        tableDetails.style.opacity = '1'; // Opacidad al estar activa
-                    }
-                }
-            }
-
-            menuItems.forEach(function (menuItem) {
-                menuItem.addEventListener('click', function () {
-                    toggleTable(menuItem);
-                });
-            });
-
-            // Resto del código...
-
-            // Agregar evento de clic a las filas de la tabla para abrir el modal
-            var tableRows = document.querySelectorAll('.custom-table tr');
-
-            tableRows.forEach(function (row) {
-                row.addEventListener('click', function () {
+            gridItems.forEach(function (gridItem) {
+                gridItem.addEventListener('click', function () {
                     openModal();
                 });
             });
@@ -339,7 +355,6 @@
                 var modal = document.getElementById('myModal');
                 modal.style.display = 'none';
                 document.body.classList.remove('modal-opened');
-
             }
 
             function openChat() {

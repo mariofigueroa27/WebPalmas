@@ -1,6 +1,5 @@
 body::before {
     content: "";
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -134,6 +133,7 @@ p {
 .row {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .column {
@@ -147,14 +147,12 @@ p {
     border-radius: 5px;
     border: none;
     text-transform: capitalize;
-    overflow-y: auto;
     /* Habilita la barra de desplazamiento vertical si es necesario */
     height: 320px;
     text-align: start;
 }
 
 .column.right-column {
-    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     border: none;
     text-transform: capitalize;
@@ -164,8 +162,14 @@ p {
     text-align: start;
 }
 
+
+.right-column {
+    margin-left: 20px; /* Puedes ajustar este valor según sea necesario */
+    margin-right: 120px; /* Puedes ajustar este valor según sea necesario */
+}
+
 .image-container {
-    background-image: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Carrusel/1.png');
+    background-image: url('https://palmasbiweb.surge.sh/Img/Carrusel/1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -322,7 +326,6 @@ p {
 
 .custom-table {
     margin-top: 8px; /* Ajuste del espacio entre la tabla personalizada y el menú */
-    overflow-y: auto; /* Permite el desplazamiento vertical */
     max-height: 0;
     height: 120px; /* Altura inicial de la tabla, comienza oculta */
     opacity: 0; /* Opacidad inicial */
@@ -381,6 +384,52 @@ p {
     position: absolute;
     top: 5px;
     right: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cuadros por fila */
+    gap: 30px; /* Espacio entre cuadros */
+    max-height: 400px; /* Altura máxima para activar el scroll vertical */
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 7px;
+    padding: 12px;
+    margin-bottom: 15px;
+    height: 42px; /* Altura ajustada de los cuadros */
+    position: relative; /* Asegura que los elementos posicionados internos se relacionen con este contenedor */
+    display: flex; /* Usa flexbox para centrar el contenido verticalmente */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Estilo para la imagen dentro del grid-item */
+.grid-item-image {
+    margin-right: -20px; /* Ajusta el espacio entre la imagen y el texto según sea necesario */
+    margin-left: -60px; /* Mueve la imagen más a la izquierda, ajusta según sea necesario */
+}
+
+/* Estilo del texto dentro de los cuadros */
+.grid-item p {
+    margin-left: 63px; /* Puedes ajustar este valor según sea necesario */
+    color: #000;
+    font-family: 'GothamBook', sans-serif;
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    /* Estilos responsivos para pantallas más pequeñas */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cuadros por fila en pantallas pequeñas */
+    }
+
+    .grid-item {
+        height: 100px; /* Altura ajustada para pantallas pequeñas */
+    }
+
+    /* Ajusta otros estilos responsivos según sea necesario */
 }
 
 /* Estilo general de la barra de desplazamiento */
