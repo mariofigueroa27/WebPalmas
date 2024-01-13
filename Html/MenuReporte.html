@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Palmas BI</title>
-    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css\MenuReporte.css">
+    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css/MenuReporte.css">
+    <style>
+        /* Agrega estilos de animación según tus necesidades */
+        .custom-table {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            opacity: 0;
+        }
+
+        .custom-table.active {
+            max-height: 1000px;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body style="
@@ -49,180 +63,24 @@
 
             <div class="column left-column">
                 <h2>Upstream</h2>
-                <div class="menu-container">
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Reportes Marketing</a>
-                        </div>
-                    </div>
-
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Reportes Comercial</a>
-                        </div>
-                    </div>
-
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Reportes Finanzas</a>
-                        </div>
-                    </div>
-
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
+                <div class="menu-container" id="menuContainerUp">
+                    <!-- Aquí se agregarán dinámicamente los elementos .menu-item -->
                 </div>
             </div>
 
             <div class="column right-column">
                 <h2>Downstream</h2>
-                <div class="menu-container">
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Plantacion</a>
-                        </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Transporte</a>
-                        </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Industrial</a>
-                        </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td>Mano Obra</td>
-                            </tr>
-                            <tr>
-                                <td>Precipitaciones</td>
-                            </tr>
-                            <tr>
-                                <td>Sanidad Vegetal</td>
-                            </tr>
-                            <tr>
-                                <td>Cash Cost</td>
-                            </tr>
-                            <tr>
-                                <td>TRANSPORTE Y AVIONETA</td>
-                            </tr>
-
-                        </table>
-                    </div>
+                <div class="menu-container" id="menuContainerDown">
+                    <!-- Aquí se agregarán dinámicamente los elementos .menu-item para Reportes Downstream -->
                 </div>
             </div>
-
-
         </div>
-
     </div>
+
     <footer class="footer">
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -239,11 +97,8 @@
                     <p>Link: <a
                             href="https://qliksense.gruporomero.com.pe/azure/sense/app/39ad6374-dc9a-4d29-8665-2822d42c7f02"
                             target="_blank">Enlace</a></p>
-                    </p>
                 </div>
             </div>
-            <!-- Botón para abrir el chat -->
-
         </div>
     </div>
 
@@ -267,43 +122,99 @@
     <iframe id="chatIframe"
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var menuItems = document.querySelectorAll('.menu-item');
+            var menuContainerUp = document.getElementById('menuContainerUp');
+            var menuContainerDown = document.getElementById('menuContainerDown');
+            var tablesContainer = document.getElementById('tablesContainer');
 
             function closeAllTables() {
-                menuItems.forEach(function (menuItem) {
-                    menuItem.classList.remove('active');
-                    var table = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
-                    if (table && table.classList.contains('custom-table')) {
-                        table.style.maxHeight = '0'; // Oculta la tabla
-                        table.style.opacity = '0'; // Opacidad inicial
-                    }
-                });
+                // Remueve las tablas existentes
+                tablesContainer.innerHTML = '';
             }
 
-            function toggleTable(menuItem) {
-                var tableDetails = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
-                var isActive = menuItem.classList.contains('active');
-
+            function toggleTable(area) {
                 closeAllTables();
 
-                if (!isActive) {
-                    menuItem.classList.add('active');
-                    if (tableDetails && tableDetails.classList.contains('custom-table')) {
-                        tableDetails.style.maxHeight = '1000px'; // Muestra la tabla
-                        tableDetails.style.opacity = '1'; // Opacidad al estar activa
-                    }
-                }
+                // Agrega la tabla al contenedor
+                var table = createTable(area);
+                tablesContainer.appendChild(table);
             }
 
-            menuItems.forEach(function (menuItem) {
-                menuItem.addEventListener('click', function () {
-                    toggleTable(menuItem);
+            // Función para crear una tabla según el área
+            function createTable(area) {
+                var table = document.createElement('table');
+                table.className = 'custom-table';
+
+                // Lógica para obtener los datos de la tabla según el área (ajusta según tus necesidades)
+                var tableData;
+                if (area === 'Up') {
+                    tableData = getUpstreamTableData();
+                } else {
+                    tableData = getDownstreamTableData();
+                }
+
+                // Crear encabezados
+                var thead = document.createElement('thead');
+                var headerRow = document.createElement('tr');
+                Object.keys(tableData[0]).forEach(function (key) {
+                    var th = document.createElement('th');
+                    th.textContent = key;
+                    headerRow.appendChild(th);
                 });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                // Crear filas de datos
+                var tbody = document.createElement('tbody');
+                tableData.forEach(function (rowData) {
+                    var row = document.createElement('tr');
+                    Object.values(rowData).forEach(function (value) {
+                        var td = document.createElement('td');
+                        td.textContent = value;
+                        row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+
+                return table;
+            }
+
+            // Función para obtener datos de ejemplo para la tabla de Upstream (ajusta según tus necesidades)
+            function getUpstreamTableData() {
+                return [
+                    { 'Área': 'Up', 'Reporte': 'Reporte 1 Up' },
+                    { 'Área': 'Up', 'Reporte': 'Reporte 2 Up' },
+                    // Agrega más datos según tu estructura
+                ];
+            }
+
+            // Función para obtener datos de ejemplo para la tabla de Downstream (ajusta según tus necesidades)
+            function getDownstreamTableData() {
+                return [
+                    { 'Área': 'Down', 'Reporte': 'Reporte 1 Down' },
+                    { 'Área': 'Down', 'Reporte': 'Reporte 2 Down' },
+                    // Agrega más datos según tu estructura
+                ];
+            }
+
+            // Agregar evento de clic a los elementos del menú Upstream
+            menuContainerUp.addEventListener('click', function (event) {
+                var menuItem = event.target.closest('.menu-item');
+                if (menuItem) {
+                    toggleTable('Up');
+                }
             });
 
-            // Resto del código...
+            // Agregar evento de clic a los elementos del menú Downstream
+            menuContainerDown.addEventListener('click', function (event) {
+                var menuItem = event.target.closest('.menu-item');
+                if (menuItem) {
+                    toggleTable('Down');
+                }
+            });
 
             // Agregar evento de clic a las filas de la tabla para abrir el modal
             var tableRows = document.querySelectorAll('.custom-table tr');
@@ -339,28 +250,88 @@
                 var modal = document.getElementById('myModal');
                 modal.style.display = 'none';
                 document.body.classList.remove('modal-opened');
-
             }
 
-            function openChat() {
-                var chatIframe = document.getElementById('chatIframe');
-                // Verificar el estado actual del iframe
-                if (chatIframe.style.display === 'block') {
-                    // Si está visible, ocultarlo
-                    chatIframe.style.display = 'none';
-                } else {
-                    // Si está oculto, mostrarlo
-                    chatIframe.style.display = 'block';
-                }
-            }
+            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoReporteUp')
+                .then(response => response.json())
+                .then(data => {
+                    // Obtener áreas únicas
+                    const uniqueAreas = new Set(data.map(report => report.Area));
 
-            // Modificar el evento de clic para abrir/cerrar el chat
-            var openChatButton = document.getElementById('openChatButton');
-            if (openChatButton) {
-                openChatButton.addEventListener('click', function () {
-                    openChat();
+                    // Itera sobre las áreas únicas y crea un menú para cada una
+                    uniqueAreas.forEach(area => {
+                        const menuItem = document.createElement('div');
+                        menuItem.className = 'menu-item';
+                        menuItem.onclick = function () {
+                            toggleTable(this);
+                        };
+
+                        menuItem.innerHTML =
+                            `<div class="menu-dropdown">
+                    <a>Reportes ${area}</a>
+                </div>`;
+
+                        // Agregar el nuevo menú al contenedor existente
+                        menuContainerUp.appendChild(menuItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al obtener datos:', error);
                 });
-            }
+
+            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoReporteDown')
+                .then(response => response.json())
+                .then(data => {
+                    // Obtener áreas únicas
+                    const uniqueAreas = new Set(data.map(report => report.Area));
+
+                    // Itera sobre las áreas únicas y crea un menú para cada una
+                    uniqueAreas.forEach(area => {
+                        const menuItem = document.createElement('div');
+                        menuItem.className = 'menu-item';
+                        menuItem.onclick = function () {
+                            toggleTable(this);
+                        };
+
+                        menuItem.innerHTML =
+                            `<div class="menu-dropdown">
+                    <a>Reportes ${area}</a>
+                </div>`;
+
+                        // Agregar el nuevo menú al contenedor existente
+                        menuContainerDown.appendChild(menuItem);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al obtener datos:', error);
+                });
+
+            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoReporteDown')
+                .then(response => response.json())
+                .then(data => {
+                    // Obtener la referencia a la tabla
+                    const tableBody = document.querySelector('#reportTable tbody');
+
+                    // Iterar sobre los datos y agregar filas a la tabla
+                    data.forEach(report => {
+                        const row = document.createElement('tr');
+                        const areaCell = document.createElement('td');
+                        const reportCell = document.createElement('td');
+
+                        // Ajusta según la estructura de tus datos
+                        areaCell.textContent = report.Area;
+                        reportCell.textContent = report.NombreReporte;
+
+                        row.appendChild(areaCell);
+                        row.appendChild(reportCell);
+
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al obtener datos:', error);
+                });
+
         });
     </script>
 </body>

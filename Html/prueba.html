@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Palmas BI</title>
+    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Css\MenuReporte.css">
+</head>
+
+<body style="
+                background-image: url('https://palmasbiweb.surge.sh/Img/Imagenes de fondo/2.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                background-color: rgba(255, 255, 255, 0.5);
+            ">
+
+    <header class="header">
+        <div id="logoContainer">
+            <img src='https://palmasbiweb.surge.sh/Img\Logos PNG\Logo Grupo Palmas-03.png' alt='Logo'>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://palmasbiweb.surge.sh/index.html">Inicio</a></li>
+                <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html/MenuReporte.html">Reportes</a>
+                </li>
+                <li><a href="https://palmasbiweb.surge.sh/Html/MenuSabana.html">Sabanas</a></li>
+                <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li>
+                <li><a href="https://palmasbiweb.surge.sh/Html\MenuCelular.html">Celular</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body-container">
+        <div class="row">
+            <div class="column reportes-column">
+                <div id="palmasVisionContainer">
+                    <div class="palmas-vision">
+                        <h2>
+                            <span id="palmas">REPORTES</span>
+                        </h2>
+                    </div>
+                </div>
+                <img id="imgReport" src="https://palmasbiweb.surge.sh/Img/Carrusel/1.png"
+                    alt="Descripción de la imagen">
+            </div>
+
+            <div class="column left-column">
+                <h2>Upstream</h2>
+                <div class="menu-container">
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Recursos Humanos</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr data-modal="myModal_PeopleAnaly" onclick="openModal(this)">
+                                <td>People Analytics Palmas</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Riesgos</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketingRiesgos">
+                        <table>
+                            <tr data-modal="myModal_IGASA" onclick="openModal(this)">
+                                <td>IGASA</td>
+                            </tr>
+                            <tr>
+                                <td>SHANUSI</td>
+                            </tr>
+                            <tr>
+                                <td>PALMAWASI</td>
+                            </tr>
+                            <tr>
+                                <td>Entidad</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
+    </footer>
+
+    <div id="myModal_PeopleAnaly" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('myModal_PeopleAnaly')">&times;</span>
+            <div class="modal-content-wrapper">
+                <div class="column left-content">
+                    <img src="https://palmasbiweb.surge.sh/Img/Imagenes%20de%20fondo/1.jpg"
+                        alt="Descripción de la imagen">
+                </div>
+                <div class="column right-content">
+                    <p><strong>People Analytics Palmas</strong></p>
+                    <table>
+                        <tr>
+                            <td><strong>Nombre del Reporte:</strong></td>
+                            <td>People Analytics Palmas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TIPO:</strong></td>
+                            <td>Operativo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Descripcion:</strong></td>
+                            <td></td> <!-- Debes llenar este campo con la descripción correspondiente -->
+                        </tr>
+                        <tr>
+                            <td><strong>Link:</strong></td>
+                            <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c50472da-7181-4291-aa7f-ea7cda863e55/overview"
+                                    target="_blank">Enlace</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lider Reporte:</strong></td>
+                            <td>Kely Zapata</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frecuencia:</strong></td>
+                            <td>Mensual</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal_IGASA" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('myModal_IGASA')">&times;</span>
+            <div class="modal-content-wrapper">
+                <div class="column left-content">
+                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
+                </div>
+                <div class="column right-content">
+                    <p><strong>IGASA</strong></p>
+                    <table>
+                        <tr>
+                            <td><strong>TIPO:</strong></td>
+                            <td>Operativo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Descripcion:</strong></td>
+                            <td></td> <!-- Puedes completar la descripción si tienes información específica -->
+                        </tr>
+                        <tr>
+                            <td><strong>Link:</strong></td>
+                            <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/1309471a-6e1e-4ec2-be3e-ffcf61dbbb87/overview"
+                                    target="_blank">Enlace</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lider Reporte:</strong></td>
+                            <td>Alfredo Trelles</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frecuencia:</strong></td>
+                            <td>Mensual</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Botón para abrir el chat -->
+        </div>
+    </div>
+
+    <button id="openChatButton" style="width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #8EB523;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        margin: 20px;
+        cursor: pointer;
+        outline: none;
+        position: fixed;
+        bottom: 9px;
+        background: url('https://palmasbiweb.surge.sh/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+        right: 20px;
+        z-index: 999;"></button>
+
+    <!-- Iframe para el chat -->
+    <iframe id="chatIframe"
+        src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
+        frameborder="0"></iframe>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function openChat() {
+                var chatIframe = document.getElementById('chatIframe');
+                // Verificar el estado actual del iframe
+                if (chatIframe.style.display === 'block') {
+                    // Si está visible, ocultarlo
+                    chatIframe.style.display = 'none';
+                } else {
+                    // Si está oculto, mostrarlo
+                    chatIframe.style.display = 'block';
+                }
+            }
+
+            // Modificar el evento de clic para abrir/cerrar el chat
+            var openChatButton = document.getElementById('openChatButton');
+            if (openChatButton) {
+                openChatButton.addEventListener('click', function () {
+                    openChat();
+                });
+            }
+
+            function toggleTable(menuItem) {
+                var tableDetails = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
+                var isActive = menuItem.classList.contains('active');
+
+                closeAllTables();
+
+                if (!isActive) {
+                    menuItem.classList.add('active');
+                    if (tableDetails && tableDetails.classList.contains('custom-table')) {
+                        tableDetails.style.maxHeight = '1000px'; // Muestra la tabla
+                        tableDetails.style.opacity = '1'; // Opacidad al estar activa
+                    }
+                }
+            }
+
+            var menuItems = document.querySelectorAll('.menu-item');
+
+            function closeAllTables() {
+                menuItems.forEach(function (menuItem) {
+                    menuItem.classList.remove('active');
+                    var table = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
+                    if (table && table.classList.contains('custom-table')) {
+                        table.style.maxHeight = '0'; // Oculta la tabla
+                        table.style.opacity = '0'; // Opacidad inicial
+                    }
+                });
+            }
+
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener('click', function () {
+                    toggleTable(menuItem);
+                });
+            });
+
+            var tableRows = document.querySelectorAll('.custom-table tr');
+
+            tableRows.forEach(function (row) {
+                row.addEventListener('click', function () {
+                    // Obtener el nombre del modal desde el atributo 'data-modal' de la fila
+                    var modalName = row.getAttribute('data-modal');
+                    openModal(modalName);
+                });
+            });
+
+            function openModal(modalName) {
+                // Obtener el modal correspondiente usando el nombre recibido
+                var modal = document.getElementById(modalName);
+
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.classList.add('modal-opened');
+
+                    // Agregar evento de clic al botón de cerrar en el modal
+                    var closeButton = modal.querySelector('.close');
+                    if (closeButton) {
+                        closeButton.addEventListener('click', function () {
+                            closeModal(modal);
+                        });
+                    }
+
+                    // Evitar que se cierre el modal al hacer clic fuera de él
+                    modal.addEventListener('click', function (event) {
+                        if (event.target === modal) {
+                            closeModal(modal);
+                        }
+                    });
+                }
+            }
+
+            function closeModal(modalName) {
+                var modal = document.getElementById(modalName);
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.classList.remove('modal-opened');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

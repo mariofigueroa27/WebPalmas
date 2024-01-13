@@ -169,7 +169,7 @@ p {
 }
 
 .image-container {
-    background-image: url('https://palmasbiweb.surge.sh/Img/Carrusel/1.png');
+    background-image: url('https://palmasbiweb.surge.shImg/Carrusel/1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -386,51 +386,49 @@ p {
     right: 5px;
 }
 
+/* Estilo del grid-container */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cuadros por fila */
-    gap: 30px; /* Espacio entre cuadros */
-    max-height: 400px; /* Altura máxima para activar el scroll vertical */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-height: 400px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+    position: relative; /* Asegura que los elementos absolutamente posicionados respeten este contenedor */
 }
 
+/* Estilo para la imagen dentro del grid-item */
+.grid-item-image {
+    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto;
+    position: absolute;
+    top: -20px; /* Ajusta la posición vertical según sea necesario */
+    left: -50px; /* Mueve la imagen completamente a la izquierda */
+    z-index: 3; /* Asegura que la imagen esté encima del texto y del grid-container */
+}
+
+/* Estilo del grid-item */
 .grid-item {
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 7px;
     padding: 12px;
     margin-bottom: 15px;
-    height: 42px; /* Altura ajustada de los cuadros */
-    position: relative; /* Asegura que los elementos posicionados internos se relacionen con este contenedor */
-    display: flex; /* Usa flexbox para centrar el contenido verticalmente */
+    position: relative; /* Asegura que los elementos absolutamente posicionados respeten este contenedor */
+    overflow: hidden;
+    display: flex; /* Usa flexbox para centrar contenido vertical y horizontalmente */
     align-items: center; /* Centra verticalmente el contenido */
-}
-
-/* Estilo para la imagen dentro del grid-item */
-.grid-item-image {
-    margin-right: -20px; /* Ajusta el espacio entre la imagen y el texto según sea necesario */
-    margin-left: -60px; /* Mueve la imagen más a la izquierda, ajusta según sea necesario */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    flex-direction: column; /* Alinea los elementos en columna para centrar verticalmente el texto */
 }
 
 /* Estilo del texto dentro de los cuadros */
 .grid-item p {
-    margin-left: 63px; /* Puedes ajustar este valor según sea necesario */
     color: #000;
     font-family: 'GothamBook', sans-serif;
     font-size: 14px; /* Tamaño de fuente ajustado */
     margin: 0;
+    text-align: center; /* Centra horizontalmente el texto */
 }
 
-@media (max-width: 768px) {
-    /* Estilos responsivos para pantallas más pequeñas */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cuadros por fila en pantallas pequeñas */
-    }
-
-    .grid-item {
-        height: 100px; /* Altura ajustada para pantallas pequeñas */
-    }
-
-    /* Ajusta otros estilos responsivos según sea necesario */
-}
 
 /* Estilo general de la barra de desplazamiento */
 ::-webkit-scrollbar {
