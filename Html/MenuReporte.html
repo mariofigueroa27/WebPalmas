@@ -5,21 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Palmas BI</title>
-    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css/MenuReporte.css">
-    <style>
-        /* Agrega estilos de animación según tus necesidades */
-        .custom-table {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-            opacity: 0;
-        }
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Css\MenuReporte.css">
 
-        .custom-table.active {
-            max-height: 1000px;
-            opacity: 1;
-        }
-    </style>
+
 </head>
 
 <body style="
@@ -41,7 +30,7 @@
                 <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html/MenuReporte.html">Reportes</a>
                 </li>
                 <li><a href="https://palmasbiweb.surge.sh/Html/MenuSabana.html">Sabanas</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li>
+                <!-- <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li> -->
                 <li><a href="https://palmasbiweb.surge.sh/Html\MenuCelular.html">Celular</a></li>
             </ul>
         </nav>
@@ -63,20 +52,345 @@
 
             <div class="column left-column">
                 <h2>Upstream</h2>
-                <div class="menu-container" id="menuContainerUp">
-                    <!-- Aquí se agregarán dinámicamente los elementos .menu-item -->
+                <div class="menu-container">
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Recursos Humanos</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c50472da-7181-4291-aa7f-ea7cda863e55/overview"
+                                        target="_blank">People Analytics Palmas</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Riesgos</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/1309471a-6e1e-4ec2-be3e-ffcf61dbbb87/overview"
+                                        target="_blank">IGASA</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/7fc32958-08ed-45fa-bfa6-84848848e5f2/overview"
+                                        target="_blank">SHANUSI</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/71f8784e-a68b-4bb6-9e38-5d0bd56fdd59/overview"
+                                        target="_blank">PALMAWASI</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/4244fc1b-cec4-4f1e-82c5-e8328c1acc44/overview "
+                                        target="_blank">Entidad</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Gerencia Comercial</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/3a5e8dbf-a1d3-42e9-8041-92f1b021abad/overview"
+                                        target="_blank">Plantilla de Datos B2C</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/94a2343a-e28d-420c-931a-cf141c1b63a4/overview"
+                                        target="_blank">Plantilla de Datos B2B</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Contabilidad</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/a5387960-79f1-4f0d-9b9f-3ccf4cf1b4a2/overview"
+                                        target="_blank">Consolidado y Combinado - Estado de Situación Financiera</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/f75d8832-e76f-4c03-a591-f280117adece/overview"
+                                        target="_blank">Estado de Situación Financiera</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/178a3a8b-f98a-49f4-bcb0-dbe66efd60ca/overview"
+                                        target="_blank">Estado de Resultados 2023</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/0ef565f9-86d9-41da-8f76-d50d4248b360/overview"
+                                        target="_blank">Mano de Obra</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Industrial</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/64be972e-d197-4978-8df3-37cda421da02/overview"
+                                        target="_blank">COSTO PRODUCTIVO</a></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
             <div class="column right-column">
                 <h2>Downstream</h2>
-                <div class="menu-container" id="menuContainerDown">
-                    <!-- Aquí se agregarán dinámicamente los elementos .menu-item para Reportes Downstream -->
+                <div class="menu-container">
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Gerencia Comercial</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/da71234b-56bb-4bfa-8f4d-07dc78a8d782/overview"
+                                        target="_blank">[DASH-GC-002] Avance de Ventas Operativo</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/73ab34fe-557d-4c71-9625-967e2391adae/overview"
+                                        target="_blank">[DASH-GC-001] Avance de Ventas</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/d14e1e37-d5fe-4d54-8bc8-e247f7e6769a/overview"
+                                        target="_blank">[DASH-GC-003] Notas de Crédito</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Contabilidad</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/f84feb79-d880-472b-9fd3-5d70a3bb2988/overview"
+                                        target="_blank">[DASH-CO-001] Reporte de Gerencia</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/cdd82739-2823-4e9b-824a-7b4bae4e2024/overview"
+                                        target="_blank">[DASH-CO-001] Comité Operaciones</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/0333ca0d-6227-4f1f-81de-722e9c07be09/overview"
+                                        target="_blank">[DASH-PP-004] DEV_Cash Cost_VERSION_NUEVA</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/8327587d-4968-4e2f-a575-83c945d0055c/overview"
+                                        target="_blank">[DASH-PP-001] Rendimiento de Actividades</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c867fc92-0dd1-4879-a747-e5a21d45e037/overview"
+                                        target="_blank">[DASH-PP-002] Productividad Agrícola Palmas</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Cadenas Productivas</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/5a6844c9-8078-46c9-b743-5cce3ab94130/overview"
+                                        target="_blank">Monitor UT Actual</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/4d4ef5e7-b134-4021-9c0f-e352b2822eea/overview"
+                                        target="_blank">UT Histórico</a></td>
+                            </tr>
+                            <tr>
+                                <td><a>Registro y Monitoreo UT</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/50d47ade-5843-4499-8886-f6432fc7950b/overview"
+                                        target="_blank">Proceso Cadenas Productivas Captación Calidad 2022 Sec</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Marketing</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/54ce5dd3-bddf-4b25-bf64-1a675edee3ca/overview"
+                                        target="_blank">[DASH-MK-004] Comité B2C</a></td>
+                            </tr>
+                            <tr>
+                                <td>[DASH-MK-009] DEV_Reporte de Rentabilidad</td>
+                            </tr>
+                            <tr>
+                                <td>[DASH-MK-006] Global</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/090fe125-44a4-45e7-8939-efaf2429d237/overview"
+                                        target="_blank">[DASH-MK-001] Dashboard Estratégico</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/7bde7551-d586-42ad-bfa9-60aef2e9c568/overview"
+                                        target="_blank">[DASH-MK-008] Comité B2B</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Planeamiento Financiero</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/7bdaf510-42b2-4edb-8362-4acf4570b805/overview"
+                                        target="_blank">[DASH-PF-001] Notas de Crédito</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/75db6a92-4787-4fab-a903-01eb42546a09/overview"
+                                        target="_blank">[DASH-PF-002] DEV_AnalisisCostos</a></td>
+                            </tr>
+                            <tr>
+                                <td>[DASH-FINTER_001]</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/75cc34af-ef6f-4aed-b973-9aa1cba0d52c/overview"
+                                        target="_blank">PalmasFinanzas - Reporte Costos y Gastos Grupo Palmas(AWS)</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/86cf0c0d-d8e6-4e5d-96aa-4f845cf80a21/overview"
+                                        target="_blank">[DASH-PF-003] DEV_Operex Finanzas</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/a244c1f5-f3b6-4fbf-8008-3f0a2b0dd534/overview"
+                                        target="_blank">[DASH-PF-004] DEV_ZBB Finanzas</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Gerencia General</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/de45235c-08a4-4447-b0ba-d3720c56da03/overview"
+                                        target="_blank">[DASH-GE-001] Reportes Analíticos Palmas (Índice)(31)</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Industrial</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c22cbf9c-ef58-4933-a2ec-8e759bd5ba94/overview"
+                                        target="_blank">REPORTE DE MERMAS IGASA</a></td>
+                            </tr>
+                            <tr>
+                                <td>REPORTE DE MERMAS DE ENVASADO Y CONSUMO DE MAT.AUX.REFINADOS</td>
+                            </tr>
+                            <tr>
+                                <td>REPORTE MERMAS ENVASADO V2</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/a74f9f33-ddc9-4e7b-9be7-ef336f063c16/overview"
+                                        target="_blank">[DASH-PI-001] Indicador de Costos Componentes - Fabricación</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Supply</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/f58b97e4-70c9-4334-89b6-fa81c3ad0dd2/overview"
+                                        target="_blank">[DASH-CA-002] Inventario & Avance de Ventas</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c3dbf71e-ef94-4400-9cff-f200761e3990/overview"
+                                        target="_blank">[DASH-CA-001] Avance de Ventas - Supply</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>ATC</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td>Balanza PW</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Recursos Humanos</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c9137963-5063-4193-9dda-3b2eaa0b9572/overview"
+                                        target="_blank">[DASH-RH-001] Indicadores RRHH por Área y Unidad</a></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
+        </div>
+
+    </div>
     <footer class="footer">
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
@@ -89,18 +403,35 @@
                     <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
                 </div>
                 <div class="column right-content">
-                    <p><strong>Reporte</strong></p>
-                    <p>Descripción de la funcionalidad del reporte...</p>
-                    <p>Usuario líder: Cesar</p>
-                    <p>Frecuencia: Diario</p>
-                    <p>Manual: <a href="#">Descargar</a></p>
-                    <p>Link: <a
-                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/39ad6374-dc9a-4d29-8665-2822d42c7f02"
-                            target="_blank">Enlace</a></p>
+                    <p><strong></strong></p>
+                    <table>
+                        <tr>
+                            <td><strong>TIPO:</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Descripcion:</strong></td>
+                            <td></td> <!-- Puedes completar la descripción si tienes información específica -->
+                        </tr>
+                        <tr>
+                            <td><strong>Link:</strong></td>
+                            <td><a href="" target="_blank">Enlace</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lider Reporte:</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Frecuencia:</strong></td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+            <!-- Botón para abrir el chat -->
         </div>
     </div>
+
 
     <button id="openChatButton" style="width: 50px;
     height: 50px;
@@ -122,98 +453,40 @@
     <iframe id="chatIframe"
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var menuContainerUp = document.getElementById('menuContainerUp');
-            var menuContainerDown = document.getElementById('menuContainerDown');
-            var tablesContainer = document.getElementById('tablesContainer');
+            var menuItems = document.querySelectorAll('.menu-item');
 
             function closeAllTables() {
-                // Remueve las tablas existentes
-                tablesContainer.innerHTML = '';
+                menuItems.forEach(function (menuItem) {
+                    menuItem.classList.remove('active');
+                    var table = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
+                    if (table && table.classList.contains('custom-table')) {
+                        table.style.maxHeight = '0'; // Oculta la tabla
+                        table.style.opacity = '0'; // Opacidad inicial
+                    }
+                });
             }
 
-            function toggleTable(area) {
+            function toggleTable(menuItem) {
+                var tableDetails = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
+                var isActive = menuItem.classList.contains('active');
+
                 closeAllTables();
 
-                // Agrega la tabla al contenedor
-                var table = createTable(area);
-                tablesContainer.appendChild(table);
+                if (!isActive) {
+                    menuItem.classList.add('active');
+                    if (tableDetails && tableDetails.classList.contains('custom-table')) {
+                        tableDetails.style.maxHeight = '1000px'; // Muestra la tabla
+                        tableDetails.style.opacity = '1'; // Opacidad al estar activa
+                    }
+                }
             }
 
-            // Función para crear una tabla según el área
-            function createTable(area) {
-                var table = document.createElement('table');
-                table.className = 'custom-table';
-
-                // Lógica para obtener los datos de la tabla según el área (ajusta según tus necesidades)
-                var tableData;
-                if (area === 'Up') {
-                    tableData = getUpstreamTableData();
-                } else {
-                    tableData = getDownstreamTableData();
-                }
-
-                // Crear encabezados
-                var thead = document.createElement('thead');
-                var headerRow = document.createElement('tr');
-                Object.keys(tableData[0]).forEach(function (key) {
-                    var th = document.createElement('th');
-                    th.textContent = key;
-                    headerRow.appendChild(th);
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener('click', function () {
+                    toggleTable(menuItem);
                 });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                // Crear filas de datos
-                var tbody = document.createElement('tbody');
-                tableData.forEach(function (rowData) {
-                    var row = document.createElement('tr');
-                    Object.values(rowData).forEach(function (value) {
-                        var td = document.createElement('td');
-                        td.textContent = value;
-                        row.appendChild(td);
-                    });
-                    tbody.appendChild(row);
-                });
-                table.appendChild(tbody);
-
-                return table;
-            }
-
-            // Función para obtener datos de ejemplo para la tabla de Upstream (ajusta según tus necesidades)
-            function getUpstreamTableData() {
-                return [
-                    { 'Área': 'Up', 'Reporte': 'Reporte 1 Up' },
-                    { 'Área': 'Up', 'Reporte': 'Reporte 2 Up' },
-                    // Agrega más datos según tu estructura
-                ];
-            }
-
-            // Función para obtener datos de ejemplo para la tabla de Downstream (ajusta según tus necesidades)
-            function getDownstreamTableData() {
-                return [
-                    { 'Área': 'Down', 'Reporte': 'Reporte 1 Down' },
-                    { 'Área': 'Down', 'Reporte': 'Reporte 2 Down' },
-                    // Agrega más datos según tu estructura
-                ];
-            }
-
-            // Agregar evento de clic a los elementos del menú Upstream
-            menuContainerUp.addEventListener('click', function (event) {
-                var menuItem = event.target.closest('.menu-item');
-                if (menuItem) {
-                    toggleTable('Up');
-                }
-            });
-
-            // Agregar evento de clic a los elementos del menú Downstream
-            menuContainerDown.addEventListener('click', function (event) {
-                var menuItem = event.target.closest('.menu-item');
-                if (menuItem) {
-                    toggleTable('Down');
-                }
             });
 
             // Agregar evento de clic a las filas de la tabla para abrir el modal
@@ -221,116 +494,29 @@
 
             tableRows.forEach(function (row) {
                 row.addEventListener('click', function () {
-                    openModal();
+                    openModal(row);
                 });
             });
 
-            function openModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'block';
-                document.body.classList.add('modal-opened');
-
-                // Agregar evento de clic al botón de cerrar en el modal
-                var closeButton = modal.querySelector('.close');
-                if (closeButton) {
-                    closeButton.addEventListener('click', function () {
-                        closeModal();
-                    });
+            function openChat() {
+                var chatIframe = document.getElementById('chatIframe');
+                // Verificar el estado actual del iframe
+                if (chatIframe.style.display === 'block') {
+                    // Si está visible, ocultarlo
+                    chatIframe.style.display = 'none';
+                } else {
+                    // Si está oculto, mostrarlo
+                    chatIframe.style.display = 'block';
                 }
-
-                // Evitar que se cierre el modal al hacer clic fuera de él
-                modal.addEventListener('click', function (event) {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                });
             }
 
-            function closeModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'none';
-                document.body.classList.remove('modal-opened');
+            // Modificar el evento de clic para abrir/cerrar el chat
+            var openChatButton = document.getElementById('openChatButton');
+            if (openChatButton) {
+                openChatButton.addEventListener('click', function () {
+                    openChat();
+                });
             }
-
-            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoReporteUp')
-                .then(response => response.json())
-                .then(data => {
-                    // Obtener áreas únicas
-                    const uniqueAreas = new Set(data.map(report => report.Area));
-
-                    // Itera sobre las áreas únicas y crea un menú para cada una
-                    uniqueAreas.forEach(area => {
-                        const menuItem = document.createElement('div');
-                        menuItem.className = 'menu-item';
-                        menuItem.onclick = function () {
-                            toggleTable(this);
-                        };
-
-                        menuItem.innerHTML =
-                            `<div class="menu-dropdown">
-                    <a>Reportes ${area}</a>
-                </div>`;
-
-                        // Agregar el nuevo menú al contenedor existente
-                        menuContainerUp.appendChild(menuItem);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al obtener datos:', error);
-                });
-
-            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoReporteDown')
-                .then(response => response.json())
-                .then(data => {
-                    // Obtener áreas únicas
-                    const uniqueAreas = new Set(data.map(report => report.Area));
-
-                    // Itera sobre las áreas únicas y crea un menú para cada una
-                    uniqueAreas.forEach(area => {
-                        const menuItem = document.createElement('div');
-                        menuItem.className = 'menu-item';
-                        menuItem.onclick = function () {
-                            toggleTable(this);
-                        };
-
-                        menuItem.innerHTML =
-                            `<div class="menu-dropdown">
-                    <a>Reportes ${area}</a>
-                </div>`;
-
-                        // Agregar el nuevo menú al contenedor existente
-                        menuContainerDown.appendChild(menuItem);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al obtener datos:', error);
-                });
-
-            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoReporteDown')
-                .then(response => response.json())
-                .then(data => {
-                    // Obtener la referencia a la tabla
-                    const tableBody = document.querySelector('#reportTable tbody');
-
-                    // Iterar sobre los datos y agregar filas a la tabla
-                    data.forEach(report => {
-                        const row = document.createElement('tr');
-                        const areaCell = document.createElement('td');
-                        const reportCell = document.createElement('td');
-
-                        // Ajusta según la estructura de tus datos
-                        areaCell.textContent = report.Area;
-                        reportCell.textContent = report.NombreReporte;
-
-                        row.appendChild(areaCell);
-                        row.appendChild(reportCell);
-
-                        tableBody.appendChild(row);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al obtener datos:', error);
-                });
 
         });
     </script>

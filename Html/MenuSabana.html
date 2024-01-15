@@ -32,7 +32,7 @@ background-color: rgba(255, 255, 255, 0.5);
                 <li><a href="https://palmasbiweb.surge.sh/index.html">Inicio</a></li>
                 <li><a href="https://palmasbiweb.surge.sh/Html\MenuReporte.html">Reportes</a></li>
                 <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html\MenuSabana.html">Sabanas</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li>
+                <!-- <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li> -->
                 <li><a href="https://palmasbiweb.surge.sh/Html\MenuCelular.html">Celular</a></li>
             </ul>
         </nav>
@@ -246,7 +246,7 @@ background-color: rgba(255, 255, 255, 0.5);
                     console.error('Error al obtener datos:', error);
                 });
 
-                fetch('https://webpalmasapis.azurewebsites.net/api/ListadoSabanaDown')
+            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoSabanaDown')
                 .then(response => response.json())
                 .then(data => {
                     // Obtener áreas únicas
