@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Palmas BI</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Css\MenuReporte.css">
+    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css\MenuReporte.css">
 
 
 </head>
@@ -53,7 +53,7 @@
             <div class="column left-column">
                 <h2>Upstream</h2>
                 <div class="menu-container">
-                    <div class="menu-item" onclick="toggleTable(this)">
+                    <!-- <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Recursos Humanos</a>
                         </div>
@@ -65,6 +65,33 @@
                                         target="_blank">People Analytics Palmas</a></td>
                             </tr>
                         </table>
+                    </div>-->
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+                    <div class="custom-table" id="customTableMarketing">
+                        <table>
+                            <tr>
+                                <td onclick="openModal('myModal', '[DASH-PP-004] DEV_Cash Cost_VERSION_NUEVA')">
+                                    [DASH-PP-004] Cash Cost
+                                </td>
+                                <!--     <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/0333ca0d-6227-4f1f-81de-722e9c07be09/overview"
+                                        target="_blank">[DASH-PP-004] Cash Cost</a></td>-->
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', '[DASH-PP-001] Rendimiento de Actividades')">
+                                    [DASH-PP-001] Rendimiento de Actividades
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', '[DASH-PP-002] Productividad Agrícola Palmas')">
+                                    [DASH-PP-002] Productividad Agrícola Palmas
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
@@ -74,24 +101,31 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/1309471a-6e1e-4ec2-be3e-ffcf61dbbb87/overview"
-                                        target="_blank">IGASA</a></td>
+                                <td onclick="openModal('myModal', 'IGASA')">
+                                    IGASA
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/7fc32958-08ed-45fa-bfa6-84848848e5f2/overview"
-                                        target="_blank">SHANUSI</a></td>
+                                <td onclick="openModal('myModal', 'SHANUSI')">
+                                    SHANUSI
+                                </td>
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/71f8784e-a68b-4bb6-9e38-5d0bd56fdd59/overview"
-                                        target="_blank">PALMAWASI</a></td>
+                                <td onclick="openModal('myModal', 'PALMAWASI')">
+                                    PALMAWASI
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/4244fc1b-cec4-4f1e-82c5-e8328c1acc44/overview "
-                                        target="_blank">Entidad</a></td>
+                                <td onclick="openModal('myModal', 'Entidad')">
+                                    Entidad
+                                </td>
+
                             </tr>
                         </table>
                     </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
+                    <!--   <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Gerencia Comercial</a>
                         </div>
@@ -105,44 +139,11 @@
                             <tr>
                                 <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/94a2343a-e28d-420c-931a-cf141c1b63a4/overview"
                                         target="_blank">Plantilla de Datos B2B</a></td>
-                            </tr>
+                            </tr> 
                         </table>
-                    </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Contabilidad</a>
-                        </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/a5387960-79f1-4f0d-9b9f-3ccf4cf1b4a2/overview"
-                                        target="_blank">Consolidado y Combinado - Estado de Situación Financiera</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/f75d8832-e76f-4c03-a591-f280117adece/overview"
-                                        target="_blank">Estado de Situación Financiera</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/178a3a8b-f98a-49f4-bcb0-dbe66efd60ca/overview"
-                                        target="_blank">Estado de Resultados 2023</a></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Plantación</a>
-                        </div>
-                    </div>
-                    <div class="custom-table" id="customTableMarketing">
-                        <table>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/0ef565f9-86d9-41da-8f76-d50d4248b360/overview"
-                                        target="_blank">Mano de Obra</a></td>
-                            </tr>
-                        </table>
-                    </div>
+                    </div>-->
+
+
                     <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Industrial</a>
@@ -152,8 +153,10 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/64be972e-d197-4978-8df3-37cda421da02/overview"
-                                        target="_blank">COSTO PRODUCTIVO</a></td>
+                                <td onclick="openModal('myModal', 'COSTO PRODUCTIVO')">
+                                    COSTO PRODUCTIVO
+                                </td>
+
                             </tr>
                         </table>
                     </div>
@@ -171,16 +174,22 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/da71234b-56bb-4bfa-8f4d-07dc78a8d782/overview"
-                                        target="_blank">[DASH-GC-002] Avance de Ventas Operativo</a></td>
+                                <td onclick="openModal('myModal', '[DASH-GC-002] Avance de Ventas Operativo')">
+                                    [DASH-GC-002] Avance de Ventas Operativo
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/73ab34fe-557d-4c71-9625-967e2391adae/overview"
-                                        target="_blank">[DASH-GC-001] Avance de Ventas</a></td>
+                                <td onclick="openModal('myModal', '[DASH-GC-001] Avance de Ventas')">
+                                    [DASH-GC-001] Avance de Ventas
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/d14e1e37-d5fe-4d54-8bc8-e247f7e6769a/overview"
-                                        target="_blank">[DASH-GC-003] Notas de Crédito</a></td>
+                                <td onclick="openModal('myModal', '[DASH-GC-003] Notas de Crédito')">
+                                    [DASH-GC-003] Notas de Crédito
+                                </td>
+
                             </tr>
                         </table>
                     </div>
@@ -192,16 +201,38 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/f84feb79-d880-472b-9fd3-5d70a3bb2988/overview"
-                                        target="_blank">[DASH-CO-001] Reporte de Gerencia</a></td>
+                                <td onclick="openModal('myModal', '[DASH-CO-001] Reporte de Gerencia')">
+                                    [DASH-CO-001] Reporte de Gerencia
+                                </td>
+
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/cdd82739-2823-4e9b-824a-7b4bae4e2024/overview"
-                                        target="_blank">[DASH-CO-001] Comité Operaciones</a></td>
+                                <td onclick="openModal('myModal', '[DASH-CO-001] Comité Operaciones')">
+                                    [DASH-CO-001] Comité Operaciones
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    onclick="openModal('myModal', 'Consolidado y Combinado - Estado de Situación Financiera')">
+                                    Consolidado y Combinado - Estado de Situación Financiera
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Estado de Situación Financiera')">
+                                    Estado de Situación Financiera
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Estasdo de Resultados 2023')">
+                                    Estado de Resultados 2023
+                                </td>
                             </tr>
                         </table>
                     </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
+                    <!--<div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Plantación</a>
                         </div>
@@ -221,8 +252,8 @@
                                         target="_blank">[DASH-PP-002] Productividad Agrícola Palmas</a></td>
                             </tr>
                         </table>
-                    </div>
-                    <div class="menu-item" onclick="toggleTable(this)">
+                    </div>-->
+                    <!--    <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Cadenas Productivas</a>
                         </div>
@@ -245,7 +276,7 @@
                                         target="_blank">Proceso Cadenas Productivas Captación Calidad 2022 Sec</a></td>
                             </tr>
                         </table>
-                    </div>
+                    </div>-->
                     <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Marketing</a>
@@ -254,22 +285,28 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/54ce5dd3-bddf-4b25-bf64-1a675edee3ca/overview"
-                                        target="_blank">[DASH-MK-004] Comité B2C</a></td>
+                                <td onclick="openModal('myModal', '[DASH-MK-004] Comité B2C')">
+                                    [DASH-MK-004] Comité B2C
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td onclick="openModal('myModal', '[DASH-MK-006] Global')">
+                                    [DASH-MK-006] Global
+                                </td>
+
                             </tr>
                             <tr>
-                                <td>[DASH-MK-009] DEV_Reporte de Rentabilidad</td>
+                                <td onclick="openModal('myModal', '[DASH-MK-001] Dashboard Estratégico')">
+                                    [DASH-MK-001] Dashboard Estratégico
+                                </td>
+
                             </tr>
                             <tr>
-                                <td>[DASH-MK-006] Global</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/090fe125-44a4-45e7-8939-efaf2429d237/overview"
-                                        target="_blank">[DASH-MK-001] Dashboard Estratégico</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/7bde7551-d586-42ad-bfa9-60aef2e9c568/overview"
-                                        target="_blank">[DASH-MK-008] Comité B2B</a></td>
+                                <td onclick="openModal('myModal', '[DASH-MK-008] Comité B2B')">
+                                    [DASH-MK-008] Comité B2B
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -281,28 +318,33 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/7bdaf510-42b2-4edb-8362-4acf4570b805/overview"
-                                        target="_blank">[DASH-PF-001] Notas de Crédito</a></td>
+                                <td onclick="openModal('myModal', '[DASH-PF-001] Notas de Crédito')">
+                                    [DASH-PF-001] Notas de Crédito
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/75db6a92-4787-4fab-a903-01eb42546a09/overview"
-                                        target="_blank">[DASH-PF-002] DEV_AnalisisCostos</a></td>
+                                <td onclick="openModal('myModal', '[DASH-MK-009] Reporte de Rentabilidad')">
+                                    [DASH-MK-009] Reporte de Rentabilidad
+                                </td>
+
                             </tr>
                             <tr>
-                                <td>[DASH-FINTER_001]</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/75cc34af-ef6f-4aed-b973-9aa1cba0d52c/overview"
-                                        target="_blank">PalmasFinanzas - Reporte Costos y Gastos Grupo Palmas(AWS)</a>
+                                <td
+                                    onclick="openModal('myModal', 'PalmasFinanzas - Reporte Costos y Gastos Grupo Palmas(AWS)')">
+                                    PalmasFinanzas - Reporte Costos y Gastos Grupo Palmas(AWS)
                                 </td>
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/86cf0c0d-d8e6-4e5d-96aa-4f845cf80a21/overview"
-                                        target="_blank">[DASH-PF-003] DEV_Operex Finanzas</a></td>
+                                <td onclick="openModal('myModal', '[DASH-PF-003] DEV_Operex Finanzas')">
+                                    [DASH-PF-003] DEV_Operex Finanzas
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/a244c1f5-f3b6-4fbf-8008-3f0a2b0dd534/overview"
-                                        target="_blank">[DASH-PF-004] DEV_ZBB Finanzas</a></td>
+                                <td onclick="openModal('myModal', '[DASH-PF-004] DEV_ZBB Finanza')">
+                                    [DASH-PF-004] DEV_ZBB Finanza
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -314,8 +356,10 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/de45235c-08a4-4447-b0ba-d3720c56da03/overview"
-                                        target="_blank">[DASH-GE-001] Reportes Analíticos Palmas (Índice)(31)</a></td>
+                                <td
+                                    onclick="openModal('myModal', '[DASH-GE-001] Reportes Analíticos Palmas (Índice)(31)')">
+                                    [DASH-GE-001] Reportes Analíticos Palmas (Índice)(31)
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -327,18 +371,28 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c22cbf9c-ef58-4933-a2ec-8e759bd5ba94/overview"
-                                        target="_blank">REPORTE DE MERMAS IGASA</a></td>
+                                <td onclick="openModal('myModal', 'REPORTE DE MERMAS IGASA')">
+                                    REPORTE DE MERMAS IGASA
+                                </td>
+
                             </tr>
                             <tr>
-                                <td>REPORTE DE MERMAS DE ENVASADO Y CONSUMO DE MAT.AUX.REFINADOS</td>
+                                <td
+                                    onclick="openModal('myModal', 'REPORTE DE MERMAS DE ENVASADO Y CONSUMO DE MAT.AUX.REFINADOS')">
+                                    REPORTE DE MERMAS DE ENVASADO Y CONSUMO DE MAT.AUX.REFINADOS
+                                </td>
+
                             </tr>
                             <tr>
-                                <td>REPORTE MERMAS ENVASADO V2</td>
+                                <td onclick="openModal('myModal', 'REPORTE MERMAS ENVASADO V2')">
+                                    REPORTE MERMAS ENVASADO V2
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/a74f9f33-ddc9-4e7b-9be7-ef336f063c16/overview"
-                                        target="_blank">[DASH-PI-001] Indicador de Costos Componentes - Fabricación</a>
+                                <td
+                                    onclick="openModal('myModal', '[DASH-PI-001] Indicador de Costos Componentes - Fabricación')">
+                                    [DASH-PI-001] Indicador de Costos Componentes - Fabricación
                                 </td>
                             </tr>
                         </table>
@@ -351,12 +405,15 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/f58b97e4-70c9-4334-89b6-fa81c3ad0dd2/overview"
-                                        target="_blank">[DASH-CA-002] Inventario & Avance de Ventas</a></td>
+                                <td onclick="openModal('myModal', '[DASH-CA-002] Inventario & Avance de Ventas')">
+                                    [DASH-CA-002] Inventario & Avance de Ventas
+                                </td>
+
                             </tr>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c3dbf71e-ef94-4400-9cff-f200761e3990/overview"
-                                        target="_blank">[DASH-CA-001] Avance de Ventas - Supply</a></td>
+                                <td onclick="openModal('myModal', '[DASH-CA-001] Avance de Ventas - Supply')">
+                                    [DASH-CA-001] Avance de Ventas - Supply
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -368,7 +425,9 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td>Balanza PW</td>
+                                <td onclick="openModal('myModal', 'Balanza PW')">
+                                    Balanza PW
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -380,8 +439,10 @@
                     <div class="custom-table" id="customTableMarketing">
                         <table>
                             <tr>
-                                <td><a href="https://qliksense.gruporomero.com.pe/azure/sense/app/c9137963-5063-4193-9dda-3b2eaa0b9572/overview"
-                                        target="_blank">[DASH-RH-001] Indicadores RRHH por Área y Unidad</a></td>
+                                <td onclick="openModal('myModal', '[DASH-RH-001] Indicadores RRHH por Área y Unidad')">
+                                    [DASH-RH-001] Indicadores RRHH por Área y Unidad
+                                </td>
+
                             </tr>
                         </table>
                     </div>
@@ -395,40 +456,14 @@
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
 
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal modal-bck">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModal()">×</span>
             <div class="modal-content-wrapper">
-                <div class="column left-content">
-                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
-                </div>
                 <div class="column right-content">
-                    <p><strong></strong></p>
-                    <table>
-                        <tr>
-                            <td><strong>TIPO:</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Descripcion:</strong></td>
-                            <td></td> <!-- Puedes completar la descripción si tienes información específica -->
-                        </tr>
-                        <tr>
-                            <td><strong>Link:</strong></td>
-                            <td><a href="" target="_blank">Enlace</a></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Lider Reporte:</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Frecuencia:</strong></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                    <!-- El contenido dinámico se agregará aquí -->
                 </div>
             </div>
-            <!-- Botón para abrir el chat -->
         </div>
     </div>
 
@@ -454,6 +489,99 @@
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
     <script>
+        var isModalOpen = false;
+
+        function openAndFillModal(modalId, apiEndpoint, itemName) {
+            // Obtén el modal y su contenedor
+            if (!isModalOpen) {
+                // Marcamos que el modal está abierto
+                isModalOpen = true;
+
+                // Obtén el modal y su contenedor
+                var modal = document.getElementById(modalId);
+                var modalContainer = modal.querySelector('.modal-content-wrapper');
+                var closeModalButton = modal.querySelector('.close');
+                // Limpia el contenido anterior del contenedor
+                modalContainer.innerHTML = '';
+
+                var apiUrl = apiEndpoint + itemName
+                // Hace la llamada a la API para obtener los datos
+                // Aquí deberías usar tu método o función para hacer la llamada a la API
+                // y manejar la respuesta de la API
+                // Puedes usar fetch o cualquier librería que prefieras para hacer llamadas AJAX
+                // En este ejemplo, supongamos que `fetch` devuelve una promesa con la respuesta JSON
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Crea elementos HTML con los datos obtenidos de la API
+                        var itemNameElement = document.createElement('p');
+
+                        var otherDataElements = document.createElement('div');
+                        otherDataElements.innerHTML = `
+                        <p><strong>${data[0].NombreReporte}</strong></p>
+                        <br>
+                         <p>Tipo: ${data[0].Tipo_OpEst}</p>
+                         <p>Descripcion: ${data[0].Descripcion}</p>
+                         <p>Usuario líder: ${data[0].LiderReporte}</p>
+                         <p>Frecuencia: ${data[0].Frecuencia}</p>
+                         <p>Link: <a
+                            href="${data[0].Link}"
+                            target="_blank">Enlace</a></p>
+                         <!-- Agrega más datos según sea necesario -->
+                         `;
+
+                        // Añade los elementos creados al contenedor del modal
+                        modalContainer.appendChild(otherDataElements);
+
+                        // Muestra el modal
+                        modal.style.display = 'block';
+
+                        var closeButton = modal.querySelector('.close');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        modal.addEventListener('click', function (event) {
+                            if (event.target === modal) {
+                                closeModal();
+                            }
+                        });
+                        if (closeModalButton) {
+                            closeModalButton.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        modal.addEventListener('click', function (event) {
+                            if (event.target === modal) {
+                                closeModal();
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener datos de la API:', error);
+                    });
+            }
+        }
+        // Función para abrir el modal con un nombre específico
+        function openModal(modalId, itemName) {
+            openAndFillModal(
+                modalId,
+                'https://webpalmasapis.azurewebsites.net/api/ListadoSabanaPorNombreReporte/',
+                itemName
+            );
+        }
+
+        function closeModal() {
+            // Marcamos que el modal está cerrado
+            isModalOpen = false;
+
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             var menuItems = document.querySelectorAll('.menu-item');
 
@@ -486,17 +614,20 @@
             menuItems.forEach(function (menuItem) {
                 menuItem.addEventListener('click', function () {
                     toggleTable(menuItem);
+                    // Deshabilita el clic en todos los elementos de menú durante 1 segundo
+                    menuItems.forEach(function (item) {
+                        item.style.pointerEvents = 'none';
+                    });
+                    setTimeout(function () {
+                        // Vuelve a habilitar el clic después de 1 segundo
+                        menuItems.forEach(function (item) {
+                            item.style.pointerEvents = 'auto';
+                        });
+                    }, 1000);
                 });
             });
 
-            // Agregar evento de clic a las filas de la tabla para abrir el modal
-            var tableRows = document.querySelectorAll('.custom-table tr');
 
-            tableRows.forEach(function (row) {
-                row.addEventListener('click', function () {
-                    openModal(row);
-                });
-            });
 
             function openChat() {
                 var chatIframe = document.getElementById('chatIframe');
@@ -519,7 +650,7 @@
             }
 
         });
-    </script>
+    </script>s
 </body>
 
 </html>

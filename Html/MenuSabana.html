@@ -20,6 +20,8 @@ background-attachment: fixed;
 margin: 0;
 font-family: Arial, sans-serif;
 background-color: rgba(255, 255, 255, 0.5);
+overflow-x: hidden;
+overflow-y: hidden;
 ">
 
     <!-- Encabezado transparente -->
@@ -38,18 +40,15 @@ background-color: rgba(255, 255, 255, 0.5);
         </nav>
     </header>
 
-    <!-- Cuerpo con opacidad -->
+
     <div class="body-container">
-        <!-- Fila con 3 columnas -->
         <div class="row">
-            <!-- Columna izquierda - Reportes -->
             <div class="column reportes-column">
                 <div id="palmasVisionContainer">
                     <div class="palmas-vision">
                         <h2>
                             <span id="palmas">SABANA</span>
                         </h2>
-                        <!-- Agrega la imagen debajo del texto -->
                     </div>
                 </div>
                 <img id="imgReport" src="https://palmasbiweb.surge.sh/Img\Carrusel\2.png"
@@ -59,8 +58,37 @@ background-color: rgba(255, 255, 255, 0.5);
             <div class="column left-column">
                 <h2>Upstream</h2>
                 <div class="menu-container">
-                    <div class="menu-container" id="menuContainerUp">
-                        <!-- Aquí se agregarán dinámicamente los elementos .menu-item -->
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalAgro()">Sabana De Datos Agro</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModalATC()">Datos-Sabana ATC</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModalTEA()">Sabana TEA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>industrial</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalMatPrimas()">Sabana Materias Primas</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -68,38 +96,165 @@ background-color: rgba(255, 255, 255, 0.5);
             <div class="column right-column">
                 <h2>Downstream</h2>
                 <div class="menu-container">
-
-                    <div class="menu-container" id="menuContainerDown">
-                        <!-- Aquí se agregarán dinámicamente los elementos .menu-item para Reportes Downstream -->
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Comercial</a>
+                        </div>
                     </div>
 
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalSabComer()">Plantilla de Datos Sabanon Comercial</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
     <footer class="footer">
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
 
-    <div id="myModal" class="modal">
+    <div id="myModalAtc" class="modal modal-atc">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModalATC()"></span>
             <div class="modal-content-wrapper">
-                <div class="column left-content">
-                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
-                </div>
+                <!--  <div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Datos-Sabana ATC.jpeg" alt="Descripción de la imagen">
+                </div>-->
                 <div class="column right-content">
-                    <p><strong>Sabana</strong></p>
-                    <p>Descripción de la funcionalidad de la sabana...</p>
-                    <p>Usuario líder: Cesar</p>
-                    <p>Frecuencia: Diario</p>
-                    <p>Manual: <a href="#">Descargar</a></p>
+                    <p><strong>Datos-Sabana ATC</strong></p>
+                    <p>Tipo: Operativo</p>
+                    <p>Descripción: Sabana de datos de ATC que contiene la información de los reportes con su frecuencia de actualización:</p>
+                    <ul>
+                        <li>Reporte de Mantenimiento / Mensual</li>
+                        <li>Gastos de Venta / Mensual</li>
+                        <li>Gastos en Transporte RR.SS / Mensual</li>
+                        <li>Gastos Fijos / Mensual</li>
+                        <li>Horómetro y Km de UT / Mensual</li>
+                        <li>HH técnicos / Mensual</li>
+                        <li>Avance de mtto. de carreteras / Semanal</li>
+                        <li>Avance de mtto. de drenajes / Semanal</li>
+                        <li>Avance de mtto. de alcantarillas / Semanal</li>
+                        <li>Seguimiento pedidos y servicios ATC / Mensual</li>
+                        <li>Documentación de Flota de ATCM / Mensual</li>
+                        <li>Programa anual CTE / Diario</li>
+                        <li>PANEL DE CONTROL ATCM / Semanal</li>
+                    </ul>
+                    <p>Responsable Palmawasi: Yoner Jhon Carhuapoma Meza</p>
+                    <p>Responsable Shanusi: Rodrigo Alonso Castillo Ramos</p>
+                    <p>Ultima Fecha Actualizacion: 11/01/2024</p>
+                    <p>Link: <a
+                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/f1bb0574-3ac6-42a9-8f32-6747834dadc4/sheet/0de0ed90-f2b6-4a17-8735-8ee0dfb26a4e/state/analysis"
+                            target="_blank">Enlace</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalAgro" class="modal modal-agro">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalAgro()"></span>
+            <div class="modal-content-wrapper">
+                <!-- <div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Sabana Agro.jpeg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Sabana De Datos Agro</strong></p>
+                    <p>Tipo: Operativo</p>
+                    <p>Descripción: Sabana de datos de Agro que contiene la información de los reportes:</p>
+                    <ul>
+                        <li>Producción / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Productividad / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
+                        <li>BPA / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Clima / Mensual / Tony Sanchez Tuanama / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Avance de labores en HA / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Mano de Obra / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Rendimiento de equipos / Mensual / Tony Sanchez Tuanama / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Nutrición / Mensual / Fernando Michel Tuesta Chichipe / Ana Sofia Rodriguez Cabrera</li>
+                        <li>Sanidad Vegetal / Mensual / Shaolin Reynaldo Muñoz / Luis Alfredo Chigne Leon</li>
+                    </ul>
+                    <p>Ultima Fecha Actualizacion: 14/01/2024</p>
+                    <p>Link: <a
+                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/0ef565f9-86d9-41da-8f76-d50d4248b360/sheet/d74bb0e1-03db-43c1-bdf0-044777e9253a/state/analysis"
+                            target="_blank">Enlace</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalTea" class="modal modal-tea">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalTea()"></span>
+            <div class="modal-content-wrapper">
+                <!--<div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Sabana TEA.jpeg.jpeg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Sabana TEA</strong></p>
+                    <p>Tipo: Operativo</p>
+                    <p>Descripción: Sabana de datos que contiene la información de los reportes: </p>
+                    <ul>
+                        <li>Reporte Calidad</li>
+                        <li>Reporte Plantación</li>
+                        <li>Reporte ATCM</li>
+                        <li>Reporte Cadenas Productivas</li>
+                        <li>Reporte Fábrica</li>
+                    </ul>
+                    <p>Responsable: Zeyda Belinda Alfaro Alva</p>
+                    <p>Ultima Fecha Actualizacion: 13/01/2024</p>
+                    <p>Frecuencia: Diaria</p>
                     <p>Link: <a
                             href="https://qliksense.gruporomero.com.pe/azure/sense/app/39ad6374-dc9a-4d29-8665-2822d42c7f02"
                             target="_blank">Enlace</a></p>
-                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalMateriasPrimas" class="modal modal-materias-primas">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalMateriasPrimas()"></span>
+            <div class="modal-content-wrapper">
+                <!--   <div class="column left-content">
+                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Sabana Materias Primas</strong></p>
+                    <p>Tipo: Operativo</p>
+                    <p>Descripción: Sabana de datos de Industrial que contiene la información de la producción diaria
+                        para las cuatro sedes</p>
+                    <p>Usuario líder: Luis Gianfranco Gonzalez Alvarez</p>
+                    <p>Fecha Ultima Actualizacion: 30/11/2023</p>
+                    <p>Frecuencia: Diaria</p>
+                    <p>Link: <a href="https://qliksense.gruporomero.com.pe/azure/sense/app/2218ea81-eb1d-4532-a19c-27ca5ae0ed04/sheet/06ba7890-154d-486b-8ad1-18137bbb98db/state/analysis" target="_blank">Enlace </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalSabCom" class="modal modal-sab-com">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalSabComer()"></span>
+            <div class="modal-content-wrapper">
+                <!-- <div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Plantilla de Datos Sabanon Comercial.jpeg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Plantilla de Datos Sabanon Comercial</strong></p>
+                    <p>Tipo: Operativo</p>
+                    <p>Descripcion: Se muestra la información en forma tabular de las principales KPIS del área Comercial
+                        en
+                        S/. TM vs PB y PVO</p>
+                    <p>Usuario líder: Henry</p>
+                    <p>Frecuencia: Diario</p>
+                    <p>Manual: <a href="#">Descargar</a></p>
+                    <p>Link: <a
+                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/e0bacbf5-9d16-4b7b-abad-1a2d15db9cee/overview"
+                            target="_blank">Enlace</a></p>
                 </div>
             </div>
         </div>
@@ -126,22 +281,139 @@ background-color: rgba(255, 255, 255, 0.5);
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
     <script>
+
+        function openModalATC() {
+            var modal = document.getElementById('myModalAtc');
+            modal.style.display = 'block';
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalATC();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalATC();
+                }
+            });
+        }
+
+        function closeModalATC() {
+            var modal = document.getElementById('myModalAtc');
+            modal.style.display = 'none';
+        }
+
+        function openModalAgro() {
+            var modal = document.getElementById('myModalAgro');
+            modal.style.display = 'block';
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalAgro();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalAgro();
+                }
+            });
+        }
+
+        function closeModalAgro() {
+            var modal = document.getElementById('myModalAgro');
+            modal.style.display = 'none';
+        }
+
+        function openModalTEA() {
+            var modal = document.getElementById('myModalTea');
+            modal.style.display = 'block';
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalTEA();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalTEA();
+                }
+            });
+        }
+
+        function closeModalTEA() {
+            var modal = document.getElementById('myModalTea');
+            modal.style.display = 'none';
+        }
+
+        function openModalMatPrimas() {
+            console.log('Abriendo modal Agro');  // Agrega este console.log
+            var modal = document.getElementById('myModalMateriasPrimas');
+            modal.style.display = 'block';
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalMatPrim();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalMatPrim();
+                }
+            });
+        }
+
+        function closeModalMateriasPrimas() {
+            var modal = document.getElementById('myModalMateriasPrimas');
+            modal.style.display = 'none';
+        }
+
+        function openModalSabComer() {
+            var modal = document.getElementById('myModalSabCom');
+            modal.style.display = 'block';
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalSabComer();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalSabComer();
+                }
+            });
+        }
+
+        function closeModalSabComer() {
+            var modal = document.getElementById('myModalSabCom');
+            modal.style.display = 'none';
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             var menuItems = document.querySelectorAll('.menu-item');
 
             function closeAllTables() {
                 menuItems.forEach(function (menuItem) {
                     menuItem.classList.remove('active');
-                    var table = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
+                    var table = menuItem.nextElementSibling;
                     if (table && table.classList.contains('custom-table')) {
-                        table.style.maxHeight = '0'; // Oculta la tabla
-                        table.style.opacity = '0'; // Opacidad inicial
+                        table.style.maxHeight = '0';
+                        table.style.opacity = '0';
                     }
                 });
             }
 
             function toggleTable(menuItem) {
-                var tableDetails = menuItem.nextElementSibling; // Obtener el siguiente elemento del menú (que es la tabla)
+                var tableDetails = menuItem.nextElementSibling;
                 var isActive = menuItem.classList.contains('active');
 
                 closeAllTables();
@@ -149,8 +421,8 @@ background-color: rgba(255, 255, 255, 0.5);
                 if (!isActive) {
                     menuItem.classList.add('active');
                     if (tableDetails && tableDetails.classList.contains('custom-table')) {
-                        tableDetails.style.maxHeight = '1000px'; // Muestra la tabla
-                        tableDetails.style.opacity = '1'; // Opacidad al estar activa
+                        tableDetails.style.maxHeight = '1000px';
+                        tableDetails.style.opacity = '1';
                     }
                 }
             }
@@ -160,44 +432,6 @@ background-color: rgba(255, 255, 255, 0.5);
                     toggleTable(menuItem);
                 });
             });
-
-            // Resto del código...
-
-            // Agregar evento de clic a las filas de la tabla para abrir el modal
-            var tableRows = document.querySelectorAll('.custom-table tr');
-
-            tableRows.forEach(function (row) {
-                row.addEventListener('click', function () {
-                    openModal();
-                });
-            });
-
-            function openModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'block';
-                document.body.classList.add('modal-opened');
-
-                // Agregar evento de clic al botón de cerrar en el modal
-                var closeButton = modal.querySelector('.close');
-                if (closeButton) {
-                    closeButton.addEventListener('click', function () {
-                        closeModal();
-                    });
-                }
-
-                // Evitar que se cierre el modal al hacer clic fuera de él
-                modal.addEventListener('click', function (event) {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                });
-            }
-
-            function closeModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'none';
-                document.body.classList.remove('modal-opened');
-            }
 
             function openChat() {
                 var chatIframe = document.getElementById('chatIframe');
@@ -211,67 +445,6 @@ background-color: rgba(255, 255, 255, 0.5);
                 }
             }
 
-            // Obtener la referencia al contenedor de menús
-            var menuContainerUp = document.getElementById('menuContainerUp');
-            var menuContainerDown = document.getElementById('menuContainerDown');
-
-            // Limpiar el contenido existente del contenedor de menús
-            menuContainerUp.innerHTML = '';
-            menuContainerDown.innerHTML = '';
-
-            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoSabanaUp')
-                .then(response => response.json())
-                .then(data => {
-                    // Obtener áreas únicas
-                    const uniqueAreas = new Set(data.map(report => report.Area));
-
-                    // Itera sobre las áreas únicas y crea un menú para cada una
-                    uniqueAreas.forEach(area => {
-                        const menuItem = document.createElement('div');
-                        menuItem.className = 'menu-item';
-                        menuItem.onclick = function () {
-                            toggleTable(this);
-                        };
-
-                        menuItem.innerHTML =
-                            `<div class="menu-dropdown">
-                    <a>Reportes ${area}</a>
-                </div>`;
-
-                        // Agregar el nuevo menú al contenedor existente
-                        menuContainerUp.appendChild(menuItem);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al obtener datos:', error);
-                });
-
-            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoSabanaDown')
-                .then(response => response.json())
-                .then(data => {
-                    // Obtener áreas únicas
-                    const uniqueAreas = new Set(data.map(report => report.Area));
-
-                    // Itera sobre las áreas únicas y crea un menú para cada una
-                    uniqueAreas.forEach(area => {
-                        const menuItem = document.createElement('div');
-                        menuItem.className = 'menu-item';
-                        menuItem.onclick = function () {
-                            toggleTable(this);
-                        };
-
-                        menuItem.innerHTML =
-                            `<div class="menu-dropdown">
-                    <a>Reportes ${area}</a>
-                </div>`;
-
-                        // Agregar el nuevo menú al contenedor existente
-                        menuContainerDown.appendChild(menuItem);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al obtener datos:', error);
-                });
             // Modificar el evento de clic para abrir/cerrar el chat
             var openChatButton = document.getElementById('openChatButton');
             if (openChatButton) {
