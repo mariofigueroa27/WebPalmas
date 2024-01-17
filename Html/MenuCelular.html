@@ -26,16 +26,82 @@
                 <li><a href="https://palmasbiweb.surge.sh/index.html">Inicio</a></li>
                 <li><a href="https://palmasbiweb.surge.sh/Html\MenuReporte.html">Reportes</a></li>
                 <li><a href="https://palmasbiweb.surge.sh/Html/MenuSabana.html">Sabanas</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/MenuNprint.html">Nprinting</a></li>
+                <li><a href="https://palmasbiweb.surge.sh/Html/MenuNprint.html">Nprinting</a></li>
                 <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html\MenuReporte.html">Celular</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="body-container">
-        <!-- Reemplaza toda la estructura actual con el siguiente texto centrado -->
-        <div class="proximamente-container">
-            <h1>¡Próximamente!</h1>
+        <div class="row">
+            <div class="column reportes-column">
+                <div id="palmasVisionContainer">
+                    <div class="palmas-vision">
+                        <h2>
+                            <span id="palmas">Celular</span>
+                        </h2>
+                    </div>
+                </div>
+                <img id="imgReport" src="https://palmasbiweb.surge.sh/Img/Reportes celular/30.png"
+                    alt="Descripción de la imagen">
+            </div>
+
+            <div class="column left-column">
+                <h2>Qlik Sense</h2>
+                <div class="menu-container">
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalAgro()">Sabana De Datos Agro</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModalATC()">Datos-Sabana ATC</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModalTEA()">Sabana TEA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>industrial</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalMatPrimas()">Sabana Materias Primas</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column right-column">
+                <h2>Power Bi</h2>
+                <div class="menu-container">
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Comercial</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalSabComer()">Plantilla de Datos Sabanon Comercial</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -9,21 +9,20 @@ body::before {
     z-index: -1;
 }
 
-body.modal-opened::before {
+.modal-atc,
+.modal-agro,
+.modal-tea,
+.modal-materias-primas,
+.modal-sab-com {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Ajusta el valor alpha para la opacidad del fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Ajusta el valor alpha para la opacidad del fondo oscuro */
     z-index: 999;
-}
-
-body.modal-opened .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header {
@@ -117,11 +116,11 @@ h2 {
 }
 
 #imgReport {
-    max-width: 70%;
+    max-width: 90%;
     /* Ajuste máximo del ancho */
-    max-height: 50%;
-    margin-left: 20px;
-    margin-top: -20px;
+    max-height: 90%;
+    margin-left: -50px;
+    margin-top: -75px;
 }
 
 p {
@@ -240,30 +239,65 @@ p {
     font-size: 30px;
     cursor: pointer;
     color: #fff;
+    z-index: 1000;
+    /* Asegura que el botón esté por encima del área de desplazamiento */
 }
 
 /* Agrega un fondo circular rojo al botón de cerrar */
 .close::before {
-    content: '\00D7'; /* Código Unicode para la X */
+    content: '\00D7';
     display: block;
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Hace que el fondo sea circular */
+    border-radius: 50%;
     text-align: center;
-    line-height: 40px; /* Alinea verticalmente la X */
-    color: #333; /* Color oscuro para la X */
+    line-height: 40px;
+    color: #333;
 }
 
+/* Agrega estos estilos al final de tu archivo CSS */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0; /* Opacidad inicial */
-    transition: opacity 0.3s ease; /* Transición de la opacidad */
+    z-index: 999;
+}
+
+.modal-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centra verticalmente */
+    min-height: 50vh;
+    position: relative;
+}
+
+/* Estilos generales del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 60px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 .modal-content-wrapper {
@@ -271,84 +305,67 @@ p {
     justify-content: center;
 }
 
-/* Estilo del contenido del modal */
-.modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 500px;
-    border-radius: 15px;
-    max-width: 800px;
-    height: 300px;
-    margin: auto;
-    position: relative;
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    opacity: 0; /* Opacidad inicial */
-    transform: translateY(-20px); /* Desplazamiento hacia arriba */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones de opacidad y transformación */
-}
-
-/* Establecer la opacidad y posición final cuando el modal está visible */
-.modal.show {
-    opacity: 1;
-}
-
-.modal.show .modal-content {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Imagen en la columna izquierda */
 .column.left-content img {
+    width: 100%;
     height: auto;
-    margin-left: -90px;
-    margin-bottom: 20px;
-    /* Ajuste del espacio entre la imagen y el texto */
+    border-radius: 10px; /* Otra opción: bordes redondeados para la imagen */
 }
 
+/* Texto y otros elementos en la columna derecha */
 .column.right-content {
-    height: auto;
-    margin-left: -200px;
-    margin-bottom: 20px;
+    padding: 20px; /* Ajuste de relleno para el texto */
 }
+
 
 /* Estilos del primer párrafo (título) en el modal */
 .modal-content p:first-child {
     color: #000;
     font-family: 'GothamBlock', sans-serif;
-    font-size: 24px; /* Puedes ajustar el tamaño según tus preferencias */
-    margin-bottom: 10px;
-    margin-top: -20px;
+    font-size: 24px;
+    /* Puedes ajustar el tamaño según tus preferencias */
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 0;
 }
 
 /* Estilos del resto de los párrafos en el modal */
 .modal-content p:not(:first-child) {
     color: #000;
     font-family: 'GothamBook', sans-serif;
-    font-size: 18px; /* Puedes ajustar el tamaño según tus preferencias */
-    margin-bottom: 10px;
+    font-size: 18x;
+    margin-right: 10px;
+    /* Puedes ajustar el tamaño según tus preferencias */
+    margin-left: 0;
+    margin-top: 0;
 }
 
+ul {
+    font-family: 'GothamLight', sans-serif;
+}
 
 .custom-table {
-    margin-top: 8px; /* Ajuste del espacio entre la tabla personalizada y el menú */
-    overflow-y: auto; /* Permite el desplazamiento vertical */
+    margin-top: 8px;
+    /* Ajuste del espacio entre la tabla personalizada y el menú */
+    overflow-y: auto;
+    /* Permite el desplazamiento vertical */
     max-height: 0;
-    height: 120px; /* Altura inicial de la tabla, comienza oculta */
-    opacity: 0; /* Opacidad inicial */
-    transition: max-height 0.5s, opacity 0.5s; 
+    height: 120px;
+    /* Altura inicial de la tabla, comienza oculta */
+    opacity: 0;
+    /* Opacidad inicial */
+    transition: max-height 0.5s, opacity 0.5s;
     font-family: 'GothamBook', sans-serif;
     /* Añade transiciones para suavizar la animación */
 }
 
 .menu-item.active .custom-table {
-    max-height: 10px; /* Altura máxima de la tabla al estar activa */
+    max-height: 10px;
+    /* Altura máxima de la tabla al estar activa */
     height: 20px;
     /* Altura máxima de la tabla al estar activa */
-    opacity: 1; /* Opacidad al estar activa */
+    opacity: 1;
+    /* Opacidad al estar activa */
 }
 
 .custom-table table {
@@ -383,13 +400,15 @@ p {
 #chatIframe {
     display: none;
     position: fixed;
-    bottom: 80px; /* Ajusta según sea necesario para dar espacio al botón */
+    bottom: 80px;
+    /* Ajusta según sea necesario para dar espacio al botón */
     right: 20px;
     width: 300px;
     height: 400px;
     border-radius: 10px;
     z-index: 998;
 }
+
 #closeChatButton {
     position: absolute;
     top: 5px;
@@ -415,17 +434,6 @@ p {
 /* Cambiar el color del pulgar de la barra de desplazamiento cuando se pasa el mouse sobre él */
 ::-webkit-scrollbar-thumb:hover {
     background-color: #8EB523;
-}
-
-.proximamente-container {
-    text-align: center;
-    margin-top: 100px; /* Ajusta según sea necesario para centrar verticalmente */
-}
-
-.proximamente-container h1 {
-    font-size: 60px;
-    color: #ffffff;
-    font-family: 'GothamBlock', sans-serif;
 }
 
 @font-face {
