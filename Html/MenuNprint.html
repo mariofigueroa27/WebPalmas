@@ -28,7 +28,7 @@
                 <li><a href="https://palmasbiweb.surge.sh/Html/MenuReporte.html">Reportes</a>
                 </li>
                 <li><a href="https://palmasbiweb.surge.sh/Html/MenuSabana.html">Sabanas</a></li>
-                <!--<li><a id="inicio" href="https://palmasbiweb.surge.sh/Html\MenuSabana.html">Nprinting</a></li>-->
+                <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html/MenuNprint.html">Nprinting</a></li>
                 <li><a href="https://palmasbiweb.surge.sh/Html\MenuCelular.html">Celular</a></li>
             </ul>
         </nav>
@@ -44,13 +44,152 @@
                         </h2>
                     </div>
                 </div>
-                <img id="imgReport" src="https://palmasbiweb.surge.sh/Img/Carrusel/1.png"
+                <img id="imgReport" src="https://palmasbiweb.surge.sh/Img\Nprinting\26.png"
                     alt="Descripción de la imagen">
             </div>
 
             <div class="column right-column">
-                <div class="grid-container" id="dynamicGridContainer">
-                    <!-- Aquí se insertarán dinámicamente los elementos grid-item desde la API -->
+                <div class="grid-container">
+                    <!-- Cuadro para Avance AVO -->
+                    <div onclick="openModal('myModal', 'Avance AVO')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+                        <!--  <div class="grid-item-image">
+                            <img src="https://palmasbiweb.surge.sh/Img/Nprinting/27.png" alt="Descripción de la imagen">
+                        </div>-->
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Avance AVO</p>
+                    </div>
+
+                    <!-- Cuadro para Reporte Avance de Ventas GP -->
+                    <div onclick="openModal('myModal', 'Reporte Avance de Ventas GP')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Reporte Avance de Ventas GP</p>
+                    </div>
+
+                    <!-- Cuadro para Inventario de Stock y PPTT Palmas -->
+                    <div onclick="openModal('myModal', 'Inventario de Stock y PPTT Palmas')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Inventario de Stock y PPTT Palmas</p>
+                    </div>
+
+                    <div onclick="openModal('myModal', 'Grupo Palmas - Informe Diario de Agro PW')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Grupo Palmas - Informe Diario de Agro PW</p>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Cuadro para Grupo Palmas - Informe Diario de Agro SH -->
+                    <div onclick="openModal('myModal', 'Grupo Palmas - Informe Diario de Agro SH')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Grupo Palmas - Informe Diario de Agro SH</p>
+                    </div>
+
+                    <!-- Cuadro para Notas de Crédito -->
+                    <div onclick="openModal('myModal', 'Notas de Crédito')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Notas de Crédito</p>
+                    </div>
+
+                    <!-- Cuadro para Resumen Comercial PVO -->
+                    <div onclick="openModal('myModal', 'Resumen Comercial PVO')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Resumen Comercial PVO</p>
+                    </div>
+
+                    <!-- Cuadro para Envío PVO -->
+                    <div onclick="openModal('myModal', 'Envío PVO')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Envío PVO</p>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Cuadro para Reporte de Gerencia -->
+                    <div onclick="openModal('myModal', 'Reporte de Gerencia')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Reporte de Gerencia</p>
+                    </div>
+
+                    <!-- Cuadro para Cash Cost Agrícola e Industrial -->
+                    <div onclick="openModal('myModal', 'Cash Cost Agrícola e Industrial')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Cash Cost Agrícola e Industrial</p>
+                    </div>
+
+                    <!-- Cuadro para Operex -->
+                    <div onclick="openModal('myModal', 'Operex')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Operex</p>
+                    </div>
+
+                    <!-- Cuadro para ZBB -->
+                    <div onclick="openModal('myModal', 'ZBB')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>ZBB</p>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+
+                    <div onclick="openModal('myModal', 'Reporte Rentabilidad')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Fin de la nueva sección -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Reporte Rentabilidad</p>
+                    </div>
+
+                    <!-- Cuadro para Comités de Negocio -->
+                    <div onclick="openModal('myModal', 'Comités de Negocio')" class="grid-item">
+                        <!-- Nueva sección para la imagen pequeña -->
+
+                        <!-- Contenido original del grid-item -->
+                        <p>Comités de Negocio</p>
+                    </div>
                 </div>
             </div>
 
@@ -60,27 +199,15 @@
     <footer class="footer">
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
-    <div id="myModal" class="modal">
+
+    <div id="myModal" class="modal modal-bck">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <span class="close" onclick="closeModal()">×</span>
             <div class="modal-content-wrapper">
-                <div class="column left-content">
-                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
-                </div>
                 <div class="column right-content">
-                    <p><strong>Reporte</strong></p>
-                    <p>Descripción de la funcionalidad del reporte...</p>
-                    <p>Usuario líder: Cesar</p>
-                    <p>Frecuencia: Diario</p>
-                    <p>Manual: <a href="#">Descargar</a></p>
-                    <p>Link: <a
-                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/39ad6374-dc9a-4d29-8665-2822d42c7f02"
-                            target="_blank">Enlace</a></p>
-                    </p>
+                    <!-- El contenido dinámico se agregará aquí -->
                 </div>
             </div>
-            <!-- Botón para abrir el chat -->
-
         </div>
     </div>
 
@@ -105,6 +232,95 @@
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
     <script>
+        var isModalOpen = false;
+
+        function openAndFillModal(modalId, apiEndpoint, itemName) {
+            // Obtén el modal y su contenedor
+            if (!isModalOpen) {
+                // Marcamos que el modal está abierto
+                isModalOpen = true;
+
+                // Obtén el modal y su contenedor
+                var modal = document.getElementById(modalId);
+                var modalContainer = modal.querySelector('.modal-content-wrapper');
+                var closeModalButton = modal.querySelector('.close');
+                // Limpia el contenido anterior del contenedor
+                modalContainer.innerHTML = '';
+
+                var apiUrl = apiEndpoint + itemName
+                // Hace la llamada a la API para obtener los datos
+                // Aquí deberías usar tu método o función para hacer la llamada a la API
+                // y manejar la respuesta de la API
+                // Puedes usar fetch o cualquier librería que prefieras para hacer llamadas AJAX
+                // En este ejemplo, supongamos que `fetch` devuelve una promesa con la respuesta JSON
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Crea elementos HTML con los datos obtenidos de la API
+                        var itemNameElement = document.createElement('p');
+
+                        var otherDataElements = document.createElement('div');
+                        otherDataElements.innerHTML = `
+                        <p><strong>${data[0].NombrePlantilla}</strong></p>
+                        <br>
+                         <p>Descripcion: ${data[0].Descripcion}</p>
+                         <p>Frecuencia envio: ${data[0].FrecuenciaEnvio}</p>
+                         <p>Distribucion: ${data[0].ListaDistribucion}</p>                    
+                         <!-- Agrega más datos según sea necesario -->
+                         `;
+
+                        // Añade los elementos creados al contenedor del modal
+                        modalContainer.appendChild(otherDataElements);
+
+                        // Muestra el modal
+                        modal.style.display = 'block';
+
+                        var closeButton = modal.querySelector('.close');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        modal.addEventListener('click', function (event) {
+                            if (event.target === modal) {
+                                closeModal();
+                            }
+                        });
+                        if (closeModalButton) {
+                            closeModalButton.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        modal.addEventListener('click', function (event) {
+                            if (event.target === modal) {
+                                closeModal();
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener datos de la API:', error);
+                    });
+            }
+        }
+        // Función para abrir el modal con un nombre específico
+        function openModal(modalId, itemName) {
+            openAndFillModal(
+                modalId,
+                'https://webpalmasapis.azurewebsites.net/api/ListadoNprintPorNombrePlantilla/',
+                itemName
+            );
+        }
+
+        function closeModal() {
+            // Marcamos que el modal está cerrado
+            isModalOpen = false;
+
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             var gridItems = document.querySelectorAll('.grid-item');
 
@@ -113,33 +329,6 @@
                     openModal();
                 });
             });
-
-            function openModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'block';
-                document.body.classList.add('modal-opened');
-
-                // Agregar evento de clic al botón de cerrar en el modal
-                var closeButton = modal.querySelector('.close');
-                if (closeButton) {
-                    closeButton.addEventListener('click', function () {
-                        closeModal();
-                    });
-                }
-
-                // Evitar que se cierre el modal al hacer clic fuera de él
-                modal.addEventListener('click', function (event) {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                });
-            }
-
-            function closeModal() {
-                var modal = document.getElementById('myModal');
-                modal.style.display = 'none';
-                document.body.classList.remove('modal-opened');
-            }
 
             function openChat() {
                 var chatIframe = document.getElementById('chatIframe');
@@ -165,35 +354,35 @@
             var dynamicGridContainer = document.getElementById('dynamicGridContainer');
 
             // Obtener datos de la API
-            fetch('https://webpalmasapis.azurewebsites.net/api/ListadoNprint')
-                .then(response => response.json())
-                .then(data => {
-                    // Iterar sobre los datos y construir elementos grid-item
-                    data.forEach(item => {
-                        var gridItem = document.createElement('div');
-                        gridItem.className = 'grid-item';
-
-                        // Nueva sección para la imagen pequeña
-                        var gridItemImage = document.createElement('div');
-                        gridItemImage.className = 'grid-item-image';
-                        var image = document.createElement('img');
-                        // Usar la URL de la imagen desde la API
-                        image.src = "https://palmasbiweb.surge.sh/Img/Nprinting/27.png"; // Asegúrate de que tu API tenga un campo imageUrl
-                        gridItemImage.appendChild(image);
-
-                        // Contenido original del grid-item
-                        var content = document.createElement('p');
-                        // Usar el campo NombrePlantilla desde la API
-                        content.textContent = item.NombrePlantilla; // Asegúrate de que tu API tenga un campo NombrePlantilla
-
-                        gridItem.appendChild(gridItemImage);
-                        gridItem.appendChild(content);
-
-                        // Agregar el nuevo elemento grid-item al contenedor dinámico
-                        dynamicGridContainer.appendChild(gridItem);
-                    });
-                })
-                .catch(error => console.error('Error al obtener datos de la API:', error));
+            /*fetch('https://webpalmasapis.azurewebsites.net/api/ListadoNprint')
+                  .then(response => response.json())
+                  .then(data => {
+                      // Iterar sobre los datos y construir elementos grid-item
+                      data.forEach(item => {
+                          var gridItem = document.createElement('div');
+                          gridItem.className = 'grid-item';
+  
+                          // Nueva sección para la imagen pequeña
+                          var gridItemImage = document.createElement('div');
+                          gridItemImage.className = 'grid-item-image';
+                          var image = document.createElement('img');
+                          // Usar la URL de la imagen desde la API
+                          image.src = "https://palmasbiweb.surge.sh/Img/Nprinting/27.png"; // Asegúrate de que tu API tenga un campo imageUrl
+                          gridItemImage.appendChild(image);
+  
+                          // Contenido original del grid-item
+                          var content = document.createElement('p');
+                          // Usar el campo NombrePlantilla desde la API
+                          content.textContent = item.NombrePlantilla; // Asegúrate de que tu API tenga un campo NombrePlantilla
+  
+                          gridItem.appendChild(gridItemImage);
+                          gridItem.appendChild(content);
+  
+                          // Agregar el nuevo elemento grid-item al contenedor dinámico
+                          dynamicGridContainer.appendChild(gridItem);
+                      });
+                  })
+                  .catch(error => console.error('Error al obtener datos de la API:', error));*/
         });
     </script>
 </body>
