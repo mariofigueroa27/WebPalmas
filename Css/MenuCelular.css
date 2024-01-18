@@ -119,7 +119,7 @@ h2 {
     max-width: 90%;
     /* Ajuste máximo del ancho */
     max-height: 90%;
-    margin-left: -50px;
+    margin-left: -30px;
     margin-top: -75px;
 }
 
@@ -309,12 +309,14 @@ p {
 .column.left-content img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Otra opción: bordes redondeados para la imagen */
+    border-radius: 10px;
+    /* Otra opción: bordes redondeados para la imagen */
 }
 
 /* Texto y otros elementos en la columna derecha */
 .column.right-content {
-    padding: 20px; /* Ajuste de relleno para el texto */
+    padding: 20px;
+    /* Ajuste de relleno para el texto */
 }
 
 
@@ -400,7 +402,7 @@ ul {
 #chatIframe {
     display: none;
     position: fixed;
-    bottom: 80px;
+    bottom: 76px;
     /* Ajusta según sea necesario para dar espacio al botón */
     right: 20px;
     width: 300px;
@@ -462,4 +464,62 @@ ul {
     src: url('https://palmasbiweb.surge.sh/Fonts/gothamlight-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s;
+}
+
+.loading-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Ajusta el tamaño y otros estilos según tus necesidades */
+}
+
+.loading-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'GothamBold', sans-serif;
+    margin-bottom: 20px;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.801);
+    border-radius: 50%;
+    border-top: 4px solid #8FB623;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .loading-overlay {
+    opacity: 0;
+    transition: opacity 0.5s;
 }

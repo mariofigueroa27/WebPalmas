@@ -1,6 +1,6 @@
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -118,11 +118,11 @@ h2 {
 }
 
 #imgReport {
-    max-width: 70%;
+    max-width: 80%;
     /* Ajuste máximo del ancho */
-    max-height: 50%;
-    margin-left: 20px;
-    margin-top: -20px;
+    max-height: 80%;
+    margin-left: 50px;
+    margin-top: -55px;
 }
 
 p {
@@ -237,13 +237,18 @@ p {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+    transition: opacity 0.3s ease;
 }
 
+.modal.show {
+    opacity: 1; /* Cambia la opacidad a 1 cuando la clase "show" está presente */
+}
 
 /* Estilos generales del modal */
 .modal-content {
@@ -276,13 +281,13 @@ p {
 
 /* Estilos del primer párrafo (título) en el modal */
 .modal-content p:first-child {
-    color: #000;
+    color: #022D21;
     font-family: 'GothamBlock', sans-serif;
     font-size: 24px;
     /* Puedes ajustar el tamaño según tus preferencias */
     margin-left: 0;
     margin-right: 10px;
-    margin-top: -20px;
+    margin-top: 10px;
 }
 
 /* Estilos del resto de los párrafos en el modal */
@@ -334,6 +339,15 @@ p {
     /* Borde de las celdas */
 }
 
+td:hover {
+    cursor: pointer;
+}
+
+.custom-table td:hover {
+    color: #022D21;
+    font-family: 'GothamBold', sans-serif;
+}
+
 .custom-table a {
     color: inherit;
     /* Hereda el color del texto de su contenedor */
@@ -362,7 +376,7 @@ p {
 #chatIframe {
     display: none;
     position: fixed;
-    bottom: 80px;
+    bottom: 76px;
     /* Ajusta según sea necesario para dar espacio al botón */
     right: 20px;
     width: 300px;
@@ -415,7 +429,7 @@ p {
     content: '\00D7';
     display: block;
     width: 40px;
-    height: 40px;
+    height: 15px;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
@@ -481,4 +495,62 @@ p {
     src: url('https://palmasbiweb.surge.sh/Fonts/gothamlight-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s;
+}
+
+.loading-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Ajusta el tamaño y otros estilos según tus necesidades */
+}
+
+.loading-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'GothamBold', sans-serif;
+    margin-bottom: 20px;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.801);
+    border-radius: 50%;
+    border-top: 4px solid #8FB623;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .loading-overlay {
+    opacity: 0;
+    transition: opacity 0.5s;
 }

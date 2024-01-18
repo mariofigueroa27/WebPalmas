@@ -5,7 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Palmas BI</title>
-    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css\MenuNprint.css">
+    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css/MenuNprint.css">
+    <style>
+        #openChatButton {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #8EB523;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            margin: 20px;
+            cursor: pointer;
+            outline: none;
+            position: fixed;
+            bottom: 9px;
+            right: 20px;
+            z-index: 999;
+            background: url('https://palmasbiweb.surge.sh/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+
+        }
+
+        #openChatButton.opened {
+            background: url('https://palmasbiweb.surge.sh/Img/Chatbot/20.png') center/contain no-repeat;
+            background-size: 170%;
+        }
+
+        #openChatButton.closed {
+
+            background: url('https://palmasbiweb.surge.sh/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+        }
+    </style>
 </head>
 
 <body style="
@@ -18,10 +48,18 @@
             background-color: rgba(255, 255, 255, 0.5);
         ">
 
-    <header class="header">
-        <div id="logoContainer">
-            <img src='https://palmasbiweb.surge.sh/Img\Logos PNG\Logo Grupo Palmas-03.png' alt='Logo'>
+    <div class="loading-overlay">
+        <div class="loading-image">
+            <img src="https://palmasbiweb.surge.sh/Img/Logos PNG/Logo Grupo Palmas-03.png" />
         </div>
+    </div>
+
+    <header class="header">
+        <a href="https://palmasbiweb.surge.sh/index.html">
+            <div id="logoContainer">
+                <img src='https://palmasbiweb.surge.sh/Img/Logos PNG/Logo Grupo Palmas-03.png' alt='Logo'>
+            </div>
+        </a>
         <nav>
             <ul>
                 <li><a href="https://palmasbiweb.surge.sh/index.html">Inicio</a></li>
@@ -211,21 +249,7 @@
         </div>
     </div>
 
-    <button id="openChatButton" style="width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #8EB523;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    margin: 20px;
-    cursor: pointer;
-    outline: none;
-    position: fixed;
-    bottom: 9px;
-    background: url('https://palmasbiweb.surge.sh/Img/Carrusel/Chatbot.png') center/cover no-repeat;
-    right: 20px;
-    z-index: 999;"></button>
+    <button id="openChatButton"></button>
 
     <!-- Iframe para el chat -->
     <iframe id="chatIframe"
@@ -275,20 +299,13 @@
                         // Muestra el modal
                         modal.style.display = 'block';
 
+                        setTimeout(function () {
+                            modal.classList.add('show');
+                        }, 190);
+
                         var closeButton = modal.querySelector('.close');
                         if (closeButton) {
                             closeButton.addEventListener('click', function () {
-                                closeModal();
-                            });
-                        }
-
-                        modal.addEventListener('click', function (event) {
-                            if (event.target === modal) {
-                                closeModal();
-                            }
-                        });
-                        if (closeModalButton) {
-                            closeModalButton.addEventListener('click', function () {
                                 closeModal();
                             });
                         }
@@ -318,10 +335,34 @@
             isModalOpen = false;
 
             var modal = document.getElementById('myModal');
-            modal.style.display = 'none';
+            modal.classList.remove('show');
+            // Agrega un pequeño retraso antes de ocultar completamente el modal
+            setTimeout(function () {
+                modal.style.display = 'none';
+            }, 100); // 300 milisegundos (
         }
 
         document.addEventListener('DOMContentLoaded', function () {
+
+            var loadingOverlay = document.querySelector('.loading-overlay');
+            var loadingImage = document.querySelector('.loading-image');
+
+            loadingOverlay.style.opacity = 1;  // Mantén la opacidad en 1 para que la pantalla de carga sea visible
+            setTimeout(function () {
+                loadingOverlay.style.opacity = 0;  // Después de 10 segundos (o el tiempo que desees), oculta la pantalla de carga
+                setTimeout(function () {
+                    loadingOverlay.style.display = 'none';
+                    document.body.classList.remove('.loading-overlay');  // Elimina la clase 'loading' después de ocultar la pantalla de carga
+                }, 800);  // Agrega un tiempo adicional si es necesario para asegurarte de que la opacidad llegue a cero antes de eliminar la clase
+            }, 2000);
+
+            loadingImage.style.display = 'block';
+
+            // Ocultar la imagen después de cierto tiempo (puedes ajustar el tiempo según tus necesidades)
+            setTimeout(function () {
+                loadingImage.style.display = 'none';
+            }, 2000);
+
             var gridItems = document.querySelectorAll('.grid-item');
 
             gridItems.forEach(function (gridItem) {
@@ -330,15 +371,35 @@
                 });
             });
 
+            // Agrega un evento de clic al documento para cerrar el chat al hacer clic fuera del iframe y del botón
+            document.addEventListener('click', function (event) {
+                var chatIframe = document.getElementById('chatIframe');
+                var openChatButton = document.getElementById('openChatButton');
+
+                // Verificar si se hizo clic fuera del iframe y del botón
+                if (event.target !== chatIframe && event.target !== openChatButton) {
+                    // Ocultar el iframe y cambiar la imagen del botón
+                    chatIframe.style.display = 'none';
+                    openChatButton.classList.remove('opened');
+                    openChatButton.classList.add('closed');
+                }
+            });
+
             function openChat() {
                 var chatIframe = document.getElementById('chatIframe');
+                var openChatButton = document.getElementById('openChatButton');
+
                 // Verificar el estado actual del iframe
                 if (chatIframe.style.display === 'block') {
-                    // Si está visible, ocultarlo
+                    // Si está visible, ocultarlo y cambiar la imagen del botón
                     chatIframe.style.display = 'none';
+                    openChatButton.classList.remove('opened');
+                    openChatButton.classList.add('closed');
                 } else {
-                    // Si está oculto, mostrarlo
+                    // Si está oculto, mostrarlo y cambiar la imagen del botón
                     chatIframe.style.display = 'block';
+                    openChatButton.classList.remove('closed');
+                    openChatButton.classList.add('opened');
                 }
             }
 
