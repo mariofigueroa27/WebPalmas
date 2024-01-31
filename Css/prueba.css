@@ -1,5 +1,6 @@
 body::before {
     content: "";
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -8,21 +9,20 @@ body::before {
     z-index: -1;
 }
 
-body.modal-opened::before {
+.modal-atc,
+.modal-agro,
+.modal-tea,
+.modal-materias-primas,
+.modal-sab-com {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Ajusta el valor alpha para la opacidad del fondo oscuro */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Ajusta el valor alpha para la opacidad del fondo oscuro */
     z-index: 999;
-}
-
-body.modal-opened .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header {
@@ -116,11 +116,11 @@ h2 {
 }
 
 #imgReport {
-    max-width: 70%;
+    max-width: 80%;
     /* Ajuste máximo del ancho */
-    max-height: 50%;
-    margin-left: 20px;
-    margin-top: -20px;
+    max-height: 80%;
+    margin-left: 12px;
+    margin-top: -55px;
 }
 
 p {
@@ -133,7 +133,6 @@ p {
 .row {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .column {
@@ -147,12 +146,14 @@ p {
     border-radius: 5px;
     border: none;
     text-transform: capitalize;
+    overflow-y: auto;
     /* Habilita la barra de desplazamiento vertical si es necesario */
     height: 320px;
     text-align: start;
 }
 
 .column.right-column {
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     border: none;
     text-transform: capitalize;
@@ -162,14 +163,8 @@ p {
     text-align: start;
 }
 
-
-.right-column {
-    margin-left: 20px; /* Puedes ajustar este valor según sea necesario */
-    margin-right: 120px; /* Puedes ajustar este valor según sea necesario */
-}
-
 .image-container {
-    background-image: url('https://palmasbiweb.surge.shImg/Carrusel/1.png');
+    background-image: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Carrusel/1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -190,6 +185,25 @@ p {
     cursor: pointer;
     text-align: start;
     font-weight: bold;
+}
+
+.submenu-item {
+    background-color: #E0CC00;
+    padding: 10px;
+    color: #fff;
+    font-family: 'GothamBook', sans-serif;
+    cursor: pointer;
+    text-align: start;
+    font-weight: bold;
+}
+
+/* Agrega la clase hidden para ocultar los submenu-item inicialmente */
+.hidden {
+    display: none;
+}
+
+.menu-dropdown-content a:hover {
+    background-color: #005a00;
 }
 
 .menu-item.active .menu-dropdown-content {
@@ -244,29 +258,60 @@ p {
     font-size: 30px;
     cursor: pointer;
     color: #fff;
+    z-index: 1000;
+    /* Asegura que el botón esté por encima del área de desplazamiento */
 }
 
 /* Agrega un fondo circular rojo al botón de cerrar */
 .close::before {
-    content: '\00D7'; /* Código Unicode para la X */
+    content: '\00D7';
     display: block;
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Hace que el fondo sea circular */
+    border-radius: 50%;
     text-align: center;
-    line-height: 40px; /* Alinea verticalmente la X */
-    color: #333; /* Color oscuro para la X */
+    line-height: 40px;
+    color: #333;
 }
 
-/* Agrega estos estilos al final de tu archivo CSS */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    z-index: 999;
+    overflow-y: auto;
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1; /* Cambia la opacidad a 1 cuando la clase "show" está presente */
+}
+
+.modal-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centra verticalmente */
+    min-height: 50vh;
+    position: relative;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 60px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 .modal-content-wrapper {
@@ -274,71 +319,67 @@ p {
     justify-content: center;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 460px;
-    border-radius: 15px;
-    /* Añade bordes circulares al modal */
-    max-width: 800px;
-    height: 300px;
-    margin: auto;
-    position: relative;
-    /* Agrega esto para que la posición absoluta de .close sea relativa al modal */
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-}
-
+/* Imagen en la columna izquierda */
 .column.left-content img {
+    width: 100%;
     height: auto;
-    margin-left: -90px;
-    margin-bottom: 20px;
-    /* Ajuste del espacio entre la imagen y el texto */
+    border-radius: 10px; /* Otra opción: bordes redondeados para la imagen */
 }
 
+/* Texto y otros elementos en la columna derecha */
 .column.right-content {
-    height: auto;
-    margin-left: -200px;
-    margin-bottom: 20px;
+    padding: 20px; /* Ajuste de relleno para el texto */
 }
+
 
 /* Estilos del primer párrafo (título) en el modal */
 .modal-content p:first-child {
-    color: #000;
+    color: #022D21;
     font-family: 'GothamBlock', sans-serif;
-    font-size: 24px; /* Puedes ajustar el tamaño según tus preferencias */
-    margin-bottom: 10px;
-    margin-top: -20px;
+    font-size: 24px;
+    /* Puedes ajustar el tamaño según tus preferencias */
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 0;
 }
 
 /* Estilos del resto de los párrafos en el modal */
 .modal-content p:not(:first-child) {
     color: #000;
     font-family: 'GothamBook', sans-serif;
-    font-size: 18px; /* Puedes ajustar el tamaño según tus preferencias */
-    margin-bottom: 10px;
+    font-size: 18x;
+    margin-right: 10px;
+    /* Puedes ajustar el tamaño según tus preferencias */
+    margin-left: 0;
+    margin-top: 0;
 }
 
+ul {
+    font-family: 'GothamLight', sans-serif;
+}
 
 .custom-table {
-    margin-top: 8px; /* Ajuste del espacio entre la tabla personalizada y el menú */
+    margin-top: 8px;
+    /* Ajuste del espacio entre la tabla personalizada y el menú */
+    overflow-y: auto;
+    /* Permite el desplazamiento vertical */
     max-height: 0;
-    height: 120px; /* Altura inicial de la tabla, comienza oculta */
-    opacity: 0; /* Opacidad inicial */
-    transition: max-height 0.5s, opacity 0.5s; 
+    height: 120px;
+    /* Altura inicial de la tabla, comienza oculta */
+    opacity: 0;
+    /* Opacidad inicial */
+    transition: max-height 0.5s, opacity 0.5s;
     font-family: 'GothamBook', sans-serif;
     /* Añade transiciones para suavizar la animación */
 }
 
 .menu-item.active .custom-table {
-    max-height: 10px; /* Altura máxima de la tabla al estar activa */
+    max-height: 10px;
+    /* Altura máxima de la tabla al estar activa */
     height: 20px;
     /* Altura máxima de la tabla al estar activa */
-    opacity: 1; /* Opacidad al estar activa */
+    opacity: 1;
+    /* Opacidad al estar activa */
 }
 
 .custom-table table {
@@ -351,6 +392,15 @@ p {
     padding: 10px;
     text-align: left;
     /* Borde de las celdas */
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+.custom-table td:hover {
+    color: #022D21;
+    font-family: 'GothamBold', sans-serif;
 }
 
 #openChatButton {
@@ -373,62 +423,20 @@ p {
 #chatIframe {
     display: none;
     position: fixed;
-    bottom: 80px; /* Ajusta según sea necesario para dar espacio al botón */
+    bottom: 76px;
+    /* Ajusta según sea necesario para dar espacio al botón */
     right: 20px;
     width: 300px;
     height: 400px;
     border-radius: 10px;
     z-index: 998;
 }
+
 #closeChatButton {
     position: absolute;
     top: 5px;
     right: 5px;
 }
-
-/* Estilo del grid-container */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-height: 400px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
-    position: relative; /* Asegura que los elementos absolutamente posicionados respeten este contenedor */
-}
-
-/* Estilo para la imagen dentro del grid-item */
-.grid-item-image {
-    max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
-    height: auto;
-    position: absolute;
-    top: -20px; /* Ajusta la posición vertical según sea necesario */
-    left: -50px; /* Mueve la imagen completamente a la izquierda */
-    z-index: 3; /* Asegura que la imagen esté encima del texto y del grid-container */
-}
-
-/* Estilo del grid-item */
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 7px;
-    padding: 12px;
-    margin-bottom: 15px;
-    position: relative; /* Asegura que los elementos absolutamente posicionados respeten este contenedor */
-    overflow: hidden;
-    display: flex; /* Usa flexbox para centrar contenido vertical y horizontalmente */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    flex-direction: column; /* Alinea los elementos en columna para centrar verticalmente el texto */
-}
-
-/* Estilo del texto dentro de los cuadros */
-.grid-item p {
-    color: #000;
-    font-family: 'GothamBook', sans-serif;
-    font-size: 14px; /* Tamaño de fuente ajustado */
-    margin: 0;
-    text-align: center; /* Centra horizontalmente el texto */
-}
-
 
 /* Estilo general de la barra de desplazamiento */
 ::-webkit-scrollbar {
@@ -453,28 +461,28 @@ p {
 
 @font-face {
     font-family: 'GothamBlock';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothamblack-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamblack-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamBold';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothambold-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothambold-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamBook';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothambook-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothambook-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamLight';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothamlight-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamlight-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }

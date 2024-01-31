@@ -187,6 +187,19 @@ p {
     font-weight: bold;
 }
 
+.submenu-item {
+    margin-left: 2%;
+    width: 90%;
+    align-items: center;
+    background-color: #E0CC00;
+    padding: 10px;
+    color: #fff;
+    font-family: 'GothamBook', sans-serif;
+    cursor: pointer;
+    text-align: start;
+    font-weight: bold;
+}
+
 .menu-item.active .menu-dropdown-content {
     background-color: rgba(255, 255, 255, 0.8);
     /* Color de fondo de las celdas */
@@ -355,7 +368,7 @@ ul {
 }
 
 .menu-item.active .custom-table {
-    max-height: 10px;
+    max-height: 1000px;
     /* Altura máxima de la tabla al estar activa */
     height: 20px;
     /* Altura máxima de la tabla al estar activa */
@@ -442,28 +455,28 @@ td:hover {
 
 @font-face {
     font-family: 'GothamBlock';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothamblack-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamblack-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamBold';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothambold-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothambold-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamBook';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothambook-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothambook-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamLight';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothamlight-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamlight-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }

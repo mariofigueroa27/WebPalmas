@@ -9,7 +9,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://palmasbiweb.surge.sh/Css/MenuSabana.css">
+    <link rel="stylesheet" href="https://palmasvision360web.azurewebsites.net/Css/MenuSabana.css">
 
     <style>
         #openChatButton {
@@ -27,24 +27,24 @@
             bottom: 9px;
             right: 20px;
             z-index: 999;
-            background: url('https://palmasbiweb.surge.sh/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+            background: url('https://palmasvision360web.azurewebsites.net/Img/Carrusel/Chatbot.png') center/cover no-repeat;
 
         }
 
         #openChatButton.opened {
-            background: url('https://palmasbiweb.surge.sh/Img/Chatbot/20.png') center/contain no-repeat;
+            background: url('https://palmasvision360web.azurewebsites.net/Img/Chatbot/20.png') center/contain no-repeat;
             background-size: 170%;
         }
 
         #openChatButton.closed {
 
-            background: url('https://palmasbiweb.surge.sh/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+            background: url('https://palmasvision360web.azurewebsites.net/Img/Carrusel/Chatbot.png') center/cover no-repeat;
         }
     </style>
 </head>
 
 <body style="
-background-image: url('https://palmasbiweb.surge.sh/Img/Imagenes de fondo/3.jpg');
+background-image: url('https://palmasvision360web.azurewebsites.net/Img/Imagenes de fondo/3.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -57,24 +57,24 @@ overflow-y: hidden;
 
     <div class="loading-overlay">
         <div class="loading-image">
-            <img src="https://palmasbiweb.surge.sh/Img/Logos PNG/Logo Grupo Palmas-03.png" />
+            <img src="https://palmasvision360web.azurewebsites.net/Img/Logos PNG/Logo Grupo Palmas-03.png" />
         </div>
     </div>
 
     <!-- Encabezado transparente -->
     <header class="header">
-        <a href="https://palmasbiweb.surge.sh/index.html">
+        <a href="https://palmasvision360web.azurewebsites.net/index.html">
             <div id="logoContainer">
-                <img src='https://palmasbiweb.surge.sh/Img/Logos PNG/Logo Grupo Palmas-03.png' alt='Logo'>
+                <img src='https://palmasvision360web.azurewebsites.net/Img/Logos PNG/Logo Grupo Palmas-03.png' alt='Logo'>
             </div>
         </a>
         <nav>
             <ul>
-                <li><a href="https://palmasbiweb.surge.sh/index.html">Inicio</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuReporte.html">Reportes</a></li>
-                <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html\MenuSabana.html">Sabanas</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuCelular.html">Celular</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/index.html">Inicio</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuReporte.html">Reportes</a></li>
+                <li><a id="inicio" href="https://palmasvision360web.azurewebsites.net/Html\MenuSabana.html">Sabanas</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuNprint.html">Nprinting</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuCelular.html">Celular</a></li>
             </ul>
         </nav>
     </header>
@@ -90,7 +90,7 @@ overflow-y: hidden;
                         </h2>
                     </div>
                 </div>
-                <img id="imgReport" src="https://palmasbiweb.surge.sh/Img\Carrusel\2.png"
+                <img id="imgReport" src="https://palmasvision360web.azurewebsites.net/Img\Carrusel\2.png"
                     alt="Descripción de la imagen">
             </div>
 
@@ -99,18 +99,188 @@ overflow-y: hidden;
                 <div class="menu-container">
                     <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
-                            <a>Plantación</a>
+                            <a>AGRO</a>
                         </div>
                     </div>
 
                     <div class="custom-table">
                         <table>
                             <tr>
-                                <td onclick="openModalAgro()">Sabana De Datos Agro</td>
+                                <td onclick="openModal('myModal', 'Produccion')">
+                                    Produccion
+                                </td>
                             </tr>
                             <tr>
-                                <td onclick="openModalATC()">Datos-Sabana ATC</td>
+                                <td onclick="openModal('myModal', 'Productividad')">
+                                    Produccion
+                                </td>
                             </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Mano de Obra')">
+                                    Mano de Obra
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td onclick="openModal('myModal', 'Clima')">
+                                    Clima
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'BPA')">
+                                    BPA
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Labores')">
+                                    Avance Labores
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td onclick="openModal('myModal', 'Rendimiento Equipos')">
+                                    Rendimiento Equipos
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Nutricion')">
+                                    Nutricion
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Sanidad Vegetal')">
+                                    Sanidad Vegetal
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="menu-item" onclick="toggleSubMenu(this)">
+                        <div class="menu-dropdown">
+                            <a>ATC</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu-item" id="palmawasi" style="display: none" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Palmawasi</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <!--PALMAWASI-->
+                            <tr>
+                                <td onclick="openModal('myModal', 'Panel de Control ATCM')">
+                                    Panel de Control ATCM </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Programa anual CTE')">
+                                    Programa anual CTE </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Horometro y Km de UT')">
+                                    Horometro y Km de UT</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Documentacion Flota ATCM')">
+                                    Documentacion Flota ATCM </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento')">
+                                    Reporte de Mantenimiento</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Carreteras')">
+                                    Avance Mtto de Carreteras</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Alcantarillas')">
+                                    Avance Mtto de Alcantarillas</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Drenajes')">
+                                    Avance Mtto de Drenajes</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos Fijos')">
+                                    Gastos Fijos</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos de Venta')">
+                                    Gastos de Venta</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos RRSS')">
+                                    Gastos RRSS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="submenu-item" id="shanusi" style="display: none" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Shanusi</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <!--SH-->
+                            <tr>
+                                <td onclick="openModal('myModal', 'HH Tecnicos')">
+                                    HH Tecnicos</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Rendimiento de Flotas')">
+                                    Rendimiento de Flotas</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Pedidos y Servicios ATC')">
+                                    Pedidos y Servicios ATC</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Documentacion Flota ATCM')">
+                                    Documentacion Flota ATCM </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento')">
+                                    Reporte de Mantenimiento</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Carreteras')">
+                                    Avance Mtto de Carreteras</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Alcantarillas')">
+                                    Avance Mtto de Alcantarillas</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Drenajes')">
+                                    Avance Mtto de Drenajes</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos Fijos')">
+                                    Gastos Fijos</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos de Venta')">
+                                    Gastos de Venta</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos RRSS')">
+                                    Gastos RRSS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
                             <tr>
                                 <td onclick="openModalTEA()">Sabana TEA</td>
                             </tr>
@@ -157,44 +327,6 @@ overflow-y: hidden;
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
 
-    <div id="myModalAtc" class="modal modal-atc">
-        <div class="modal-content">
-            <span class="close" onclick="closeModalATC()"></span>
-            <div class="modal-content-wrapper">
-                <!--  <div class="column left-content">
-                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Datos-Sabana ATC.jpeg" alt="Descripción de la imagen">
-                </div>-->
-                <div class="column right-content">
-                    <p><strong>Datos-Sabana ATC</strong></p>
-                    <p><strong>Tipo:</strong> Operativo</p>
-                    <p><strong></strong>Descripción: Sabana de datos de ATC que contiene la información de los reportes con su frecuencia
-                        de actualización:</p>
-                    <ul>
-                        <li>Reporte de Mantenimiento / Mensual</li>
-                        <li>Gastos de Venta / Mensual</li>
-                        <li>Gastos en Transporte RR.SS / Mensual</li>
-                        <li>Gastos Fijos / Mensual</li>
-                        <li>Horómetro y Km de UT / Mensual</li>
-                        <li>HH técnicos / Mensual</li>
-                        <li>Avance de mtto. de carreteras / Semanal</li>
-                        <li>Avance de mtto. de drenajes / Semanal</li>
-                        <li>Avance de mtto. de alcantarillas / Semanal</li>
-                        <li>Seguimiento pedidos y servicios ATC / Mensual</li>
-                        <li>Documentación de Flota de ATCM / Mensual</li>
-                        <li>Programa anual CTE / Diario</li>
-                        <li>PANEL DE CONTROL ATCM / Semanal</li>
-                    </ul>
-                    <p><strong>Responsable Palmawasi:</strong> Yoner Jhon Carhuapoma Meza</p>
-                    <p><strong>Responsable Shanusi:</strong> Rodrigo Alonso Castillo Ramos</p>
-                    <p><strong>Ultima Fecha Actualizacion:</strong> 11/01/2024</p>
-                    <p><strong>Link: </strong> <a
-                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/f1bb0574-3ac6-42a9-8f32-6747834dadc4/sheet/0de0ed90-f2b6-4a17-8735-8ee0dfb26a4e/state/analysis"
-                            target="_blank">Enlace</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="myModalAgro" class="modal modal-agro">
         <div class="modal-content">
             <span class="close" onclick="closeModalAgro()"></span>
@@ -205,7 +337,8 @@ overflow-y: hidden;
                 <div class="column right-content">
                     <p><strong>Sabana De Datos Agro</strong></p>
                     <p><strong>Tipo:</strong> Operativo</p>
-                    <p><strong>Descripcion:</strong> Sabana de datos de Agro que contiene la información de los reportes:</p>
+                    <p><strong>Descripcion:</strong> Sabana de datos de Agro que contiene la información de los
+                        reportes:</p>
                     <ul>
                         <li>Producción / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
                         <li>Productividad / Diario / Alfredo Perez Caceres / Ana Sofia Rodriguez Cabrera</li>
@@ -260,12 +393,13 @@ overflow-y: hidden;
             <span class="close" onclick="closeModalMateriasPrimas()"></span>
             <div class="modal-content-wrapper">
                 <!--   <div class="column left-content">
-                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
+                    <img src="https://palmasvision360web.azurewebsites.net/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
                 </div>-->
                 <div class="column right-content">
                     <p><strong>Sabana Materias Primas</strong></p>
                     <p><strong>Tipo:</strong> Operativo</p>
-                    <p><strong>Descripción:</strong> Sabana de datos de Industrial que contiene la información de la producción diaria
+                    <p><strong>Descripción:</strong> Sabana de datos de Industrial que contiene la información de la
+                        producción diaria
                         para las cuatro sedes</p>
                     <p><strong>Usuario líder:</strong>Luis Gianfranco Gonzalez Alvarez</p>
                     <p><strong>Fecha Ultima Actualizacion:</strong> 30/11/2023</p>
@@ -273,6 +407,45 @@ overflow-y: hidden;
                     <p><strong>Link: </strong> <a
                             href="https://qliksense.gruporomero.com.pe/azure/sense/app/2218ea81-eb1d-4532-a19c-27ca5ae0ed04/sheet/06ba7890-154d-486b-8ad1-18137bbb98db/state/analysis"
                             target="_blank">Enlace </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalAtc" class="modal modal-atc">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalATC()"></span>
+            <div class="modal-content-wrapper">
+                <!--  <div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Datos-Sabana ATC.jpeg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Datos-Sabana ATC</strong></p>
+                    <p><strong>Tipo:</strong> Operativo</p>
+                    <p><strong></strong>Descripción: Sabana de datos de ATC que contiene la información de los reportes
+                        con su frecuencia
+                        de actualización:</p>
+                    <ul>
+                        <li>Reporte de Mantenimiento / Mensual</li>
+                        <li>Gastos de Venta / Mensual</li>
+                        <li>Gastos en Transporte RR.SS / Mensual</li>
+                        <li>Gastos Fijos / Mensual</li>
+                        <li>Horómetro y Km de UT / Mensual</li>
+                        <li>HH técnicos / Mensual</li>
+                        <li>Avance de mtto. de carreteras / Semanal</li>
+                        <li>Avance de mtto. de drenajes / Semanal</li>
+                        <li>Avance de mtto. de alcantarillas / Semanal</li>
+                        <li>Seguimiento pedidos y servicios ATC / Mensual</li>
+                        <li>Documentación de Flota de ATCM / Mensual</li>
+                        <li>Programa anual CTE / Diario</li>
+                        <li>PANEL DE CONTROL ATCM / Semanal</li>
+                    </ul>
+                    <p><strong>Responsable Palmawasi:</strong> Yoner Jhon Carhuapoma Meza</p>
+                    <p><strong>Responsable Shanusi:</strong> Rodrigo Alonso Castillo Ramos</p>
+                    <p><strong>Ultima Fecha Actualizacion:</strong> 11/01/2024</p>
+                    <p><strong>Link: </strong> <a
+                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/f1bb0574-3ac6-42a9-8f32-6747834dadc4/sheet/0de0ed90-f2b6-4a17-8735-8ee0dfb26a4e/state/analysis"
+                            target="_blank">Enlace</a></p>
                 </div>
             </div>
         </div>
@@ -288,7 +461,8 @@ overflow-y: hidden;
                 <div class="column right-content">
                     <p><strong>Plantilla de Datos Sabanon Comercial</strong></p>
                     <p><strong>Tipo:</strong> Operativo</p>
-                    <p><strong>Descripcion:</strong> Se muestra la información en forma tabular de las principales KPIS del área
+                    <p><strong>Descripcion:</strong> Se muestra la información en forma tabular de las principales KPIS
+                        del área
                         Comercial
                         en
                         S/. TM vs PB y PVO</p>
@@ -303,6 +477,43 @@ overflow-y: hidden;
         </div>
     </div>
 
+    <div id="myModalSabCom" class="modal modal-sab-com">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalSabComer()"></span>
+            <div class="modal-content-wrapper">
+                <!-- <div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Reportes Capturas\Plantilla de Datos Sabanon Comercial.jpeg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Plantilla de Datos Sabanon Comercial</strong></p>
+                    <p><strong>Tipo:</strong> Operativo</p>
+                    <p><strong>Descripcion:</strong> Se muestra la información en forma tabular de las principales KPIS
+                        del área
+                        Comercial
+                        en
+                        S/. TM vs PB y PVO</p>
+                    <p><strong>Usuario líder:</strong> Henry</p>
+                    <p><strong>Frecuencia:</strong> Diario</p>
+                    <p><strong>Manual:</strong> <a href="#">Descargar</a></p>
+                    <p><strong>Link: </strong> <a
+                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/e0bacbf5-9d16-4b7b-abad-1a2d15db9cee/overview"
+                            target="_blank">Enlace</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal modal-bck">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <div class="modal-content-wrapper">
+                <div class="column right-content">
+                    <!-- El contenido dinámico se agregará aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <button id="openChatButton"></button>
 
     <!-- Iframe para el chat -->
@@ -310,6 +521,103 @@ overflow-y: hidden;
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
     <script>
+        var isModalOpen = false;
+
+        function openAndFillModal(modalId, apiEndpoint, itemName) {
+            // Obtén el modal y su contenedor
+            if (!isModalOpen) {
+                // Marcamos que el modal está abierto
+                isModalOpen = true;
+
+                // Obtén el modal y su contenedor
+                var modal = document.getElementById(modalId);
+                var modalContainer = modal.querySelector('.modal-content-wrapper');
+                var closeModalButton = modal.querySelector('.close');
+                // Limpia el contenido anterior del contenedor
+                modalContainer.innerHTML = '';
+
+                var apiUrl = apiEndpoint + itemName
+                // Hace la llamada a la API para obtener los datos
+                // Aquí deberías usar tu método o función para hacer la llamada a la API
+                // y manejar la respuesta de la API
+                // Puedes usar fetch o cualquier librería que prefieras para hacer llamadas AJAX
+                // En este ejemplo, supongamos que `fetch` devuelve una promesa con la respuesta JSON
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Crea elementos HTML con los datos obtenidos de la API
+                        var itemNameElement = document.createElement('p');
+
+                        var otherDataElements = document.createElement('div');
+                        otherDataElements.innerHTML = `
+                <p><strong>${data[0].NombreReporte}</strong></p>
+                <br>
+                <p><strong>Tipo:</strong> ${data[0].Tipo_OpEst}</p>
+                <p><strong>Descripcion:</strong> ${data[0].Descripcion}</p>
+                <p><strong>Usuario líder:</strong> ${data[0].LiderReporte}</p>
+                <p><strong>Frecuencia:</strong> ${data[0].Frecuencia}</p>
+                <p><strong>Link:</strong> <a href="${data[0].Link}" target="_blank">Enlace</a></p>
+                <!-- Agrega más datos según sea necesario -->
+`;
+
+                        // Añade los elementos creados al contenedor del modal
+                        modalContainer.appendChild(otherDataElements);
+
+                        // Muestra el modal
+                        modal.style.display = 'block';
+
+                        // Agregar la clase 'show' después de un breve retraso
+                        setTimeout(function () {
+                            modal.classList.add('show');
+                        }, 190);
+
+                        var closeButton = modal.querySelector('.close');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        modal.addEventListener('click', function (event) {
+                            if (event.target === modal) {
+                                closeModal();
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener datos de la API:', error);
+                    });
+            }
+        }
+        // Función para abrir el modal con un nombre específico
+        function openModal(modalId, itemName) {
+            openAndFillModal(
+                modalId,
+                'https://webpalmasapis.azurewebsites.net/api/ListadoSabanaPorNombreReporte/',
+                itemName
+            );
+        }
+
+        function closeModal() {
+            // Marcamos que el modal está cerrado
+            isModalOpen = false;
+
+            var modal = document.getElementById('myModal');
+            modal.classList.remove('show');
+            // Agrega un pequeño retraso antes de ocultar completamente el modal
+            setTimeout(function () {
+                modal.style.display = 'none';
+            }, 100); // 300 milisegundos (ajusta según sea necesario)
+        }
+
+        function toggleSubMenu() {
+            var palmawasi = document.getElementById("palmawasi");
+            var shanusi = document.getElementById("shanusi");
+
+            // Toggle para mostrar/ocultar
+            palmawasi.style.display = (palmawasi.style.display === 'none') ? 'block' : 'none';
+            shanusi.style.display = (shanusi.style.display === 'none') ? 'block' : 'none';
+        }
 
         function openModalATC() {
             var modal = document.getElementById('myModalAtc');
@@ -488,7 +796,7 @@ overflow-y: hidden;
                 loadingImage.style.display = 'none';
             }, 2000);
 
-            var menuItems = document.querySelectorAll('.menu-item');
+            var menuItems = document.querySelectorAll('.menu-item, .submenu-item');
 
             function closeAllTables() {
                 menuItems.forEach(function (menuItem) {
@@ -522,8 +830,8 @@ overflow-y: hidden;
                 });
             });
 
-             // Agrega un evento de clic al documento para cerrar el chat al hacer clic fuera del iframe y del botón
-             document.addEventListener('click', function (event) {
+            // Agrega un evento de clic al documento para cerrar el chat al hacer clic fuera del iframe y del botón
+            document.addEventListener('click', function (event) {
                 var chatIframe = document.getElementById('chatIframe');
                 var openChatButton = document.getElementById('openChatButton');
 

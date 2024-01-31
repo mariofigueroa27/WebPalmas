@@ -137,6 +137,40 @@ p {
     justify-content: space-between;
 }
 
+/* Estilo general para los elementos del menú */
+.menu-item {
+    background-color: #8EB523;
+    padding: 10px;
+    color: #fff;
+    font-family: 'GothamBook', sans-serif;
+    cursor: pointer;
+    text-align: start;
+    font-weight: bold;
+    border-radius: 5px; /* Agrega bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre elementos del menú */
+}
+
+/* Estilo cuando un elemento del menú está activo */
+.menu-item.active .menu-dropdown-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Color de fondo de las celdas */
+    display: block;
+}
+
+/* Estilo para el contenido dentro del menú desplegable */
+.menu-dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px; /* Agrega bordes redondeados */
+}
+
+.menu-dropdown-content a:hover {
+    background-color: #005a00;
+    border-radius: 5px; /* Agrega bordes redondeados al pasar el mouse */
+}
+
 .column {
     flex: 1;
     padding: 20px;
@@ -355,7 +389,6 @@ td:hover {
     /* Quita el subrayado */
 }
 
-
 #openChatButton {
     width: 50px;
     height: 50px;
@@ -471,28 +504,28 @@ td:hover {
 
 @font-face {
     font-family: 'GothamBlock';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothamblack-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamblack-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamBold';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothambold-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothambold-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamBook';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothambook-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothambook-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }
 
 @font-face {
     font-family: 'GothamLight';
-    src: url('https://palmasbiweb.surge.sh/Fonts/gothamlight-font.otf') format('truetype');
+    src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamlight-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
 }

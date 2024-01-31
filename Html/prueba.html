@@ -5,33 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Palmas BI</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Css\MenuReporte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Css\prueba.css">
+
+    <style>
+        #openChatButton {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #8EB523;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            margin: 20px;
+            cursor: pointer;
+            outline: none;
+            position: fixed;
+            bottom: 9px;
+            right: 20px;
+            z-index: 999;
+            background: url('https://palmasvision360web.azurewebsites.net/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+
+        }
+
+        #openChatButton.opened {
+            background: url('https://palmasvision360web.azurewebsites.net/Img/Chatbot/20.png') center/contain no-repeat;
+            background-size: 170%;
+        }
+
+        #openChatButton.closed {
+
+            background: url('https://palmasvision360web.azurewebsites.net/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+        }
+    </style>
 </head>
 
 <body style="
-            background-image: url('https://palmasbiweb.surge.sh/Img/Imagenes de fondo/2.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            background-color: rgba(255, 255, 255, 0.5);
-        ">
+background-image: url('https://palmasvision360web.azurewebsites.net/Img/Imagenes de fondo/3.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: rgba(255, 255, 255, 0.5);
+overflow-x: hidden;
+overflow-y: hidden;
+">
 
+
+    <!-- Encabezado transparente -->
     <header class="header">
-        <div id="logoContainer">
-            <img src='https://palmasbiweb.surge.sh/Img\Logos PNG\Logo Grupo Palmas-03.png' alt='Logo'>
-        </div>
+        <a href="https://palmasvision360web.azurewebsites.net/index.html">
+            <div id="logoContainer">
+                <img src='https://palmasvision360web.azurewebsites.net/Img/Logos PNG/Logo Grupo Palmas-03.png' alt='Logo'>
+            </div>
+        </a>
         <nav>
             <ul>
-                <li><a href="https://palmasbiweb.surge.sh/index.html">Inicio</a></li>
-                <li><a id="inicio" href="https://palmasbiweb.surge.sh/Html/MenuReporte.html">Reportes</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html/MenuSabana.html">Sabanas</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuNprint.html">Nprinting</a></li>
-                <li><a href="https://palmasbiweb.surge.sh/Html\MenuCelular.html">Celular</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/index.html">Inicio</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuReporte.html">Reportes</a></li>
+                <li><a id="inicio" href="https://palmasvision360web.azurewebsites.net/Html\MenuSabana.html">Sabanas</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuNprint.html">Nprinting</a></li>
+                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuCelular.html">Celular</a></li>
             </ul>
         </nav>
     </header>
+
 
     <div class="body-container">
         <div class="row">
@@ -39,11 +81,12 @@
                 <div id="palmasVisionContainer">
                     <div class="palmas-vision">
                         <h2>
-                            <span id="palmas">REPORTES</span>
+                            <span id="palmas">SABANA</span>
                         </h2>
                     </div>
                 </div>
-                <img id="imgReport" src="https://palmasbiweb.surge.sh/Img/Carrusel/1.png" alt="Descripción de la imagen">
+                <img id="imgReport" src="https://palmasvision360web.azurewebsites.net/Img\Carrusel\2.png"
+                    alt="Descripción de la imagen">
             </div>
 
             <div class="column left-column">
@@ -51,76 +94,242 @@
                 <div class="menu-container">
                     <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
-                            <a>Recursos Humanos</a>
+                            <a>AGRO</a>
                         </div>
                     </div>
-                    <div class="custom-table" id="customTableMarketing">
+
+                    <div class="custom-table">
                         <table>
-                            <tr data-id="1"> <!-- Añadir un atributo de datos con el identificador único -->
-                                <td>People Analytics Palmas</td>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Produccion')">
+                                    Produccion
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Productividad')">
+                                    Produccion
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Mano de Obra')">
+                                    Mano de Obra
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td onclick="openModal('myModal', 'Clima')">
+                                    Clima
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'BPA')">
+                                    BPA
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Labores')">
+                                    Avance Labores
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td onclick="openModal('myModal', 'Rendimiento Equipos')">
+                                    Rendimiento Equipos
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Nutricion')">
+                                    Nutricion
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Sanidad Vegetal')">
+                                    Sanidad Vegetal
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div class="menu-item" onclick="toggleSubMenu(this)">
+                        <div class="menu-dropdown">
+                            <a>ATC</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu-item hidden" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Palmawasi</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu-item hidden" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Shanusi</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <!--PALMAWASI-->
+                            <tr>
+                                <td onclick="openModal('myModal', 'Panel de Control ATCM')">
+                                    Panel de Control ATCM </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Programa anual CTE')">
+                                    Programa anual CTE </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Horometro y Km de UT')">
+                                    Horometro y Km de UT</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Documentacion Flota ATCM')">
+                                    Documentacion Flota ATCM </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento')">
+                                    Reporte de Mantenimiento</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Carreteras')">
+                                    Avance Mtto de Carreteras</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Alcantarillas')">
+                                    Avance Mtto de Alcantarillas</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Drenajes')">
+                                    Avance Mtto de Drenajes</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos Fijos')">
+                                    Gastos Fijos</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos de Venta')">
+                                    Gastos de Venta</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos RRSS')">
+                                    Gastos RRSS</td>
+                            </tr>
+                            <!--SH-->
+                            <tr>
+                                <td onclick="openModal('myModal', 'HH Tecnicos')">
+                                    HH Tecnicos</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Rendimiento de Flotas')">
+                                    Rendimiento de Flotas</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Pedidos y Servicios ATC')">
+                                    Pedidos y Servicios ATC</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Documentacion Flota ATCM')">
+                                    Documentacion Flota ATCM </td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento')">
+                                    Reporte de Mantenimiento</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Carreteras')">
+                                    Avance Mtto de Carreteras</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Alcantarillas')">
+                                    Avance Mtto de Alcantarillas</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Avance Mtto de Drenajes')">
+                                    Avance Mtto de Drenajes</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos Fijos')">
+                                    Gastos Fijos</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos de Venta')">
+                                    Gastos de Venta</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModal('myModal', 'Gastos RRSS')">
+                                    Gastos RRSS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Plantación</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalAgro()">Sabana De Datos Agro</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModalATC()">Datos-Sabana ATC</td>
+                            </tr>
+                            <tr>
+                                <td onclick="openModalTEA()">Sabana TEA</td>
                             </tr>
                         </table>
                     </div>
                     <div class="menu-item" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
-                            <a>Riesgos</a>
+                            <a>industrial</a>
                         </div>
                     </div>
-                    <div class="custom-table" id="customTableMarketing">
+
+                    <div class="custom-table">
                         <table>
-                            <tr data-id="2"> <!-- Añadir un atributo de datos con el identificador único -->
-                                <td>IGASA</td>
+                            <tr>
+                                <td onclick="openModalMatPrimas()">Sabana Materias Primas</td>
                             </tr>
-                            <!-- Otras filas... -->
                         </table>
                     </div>
-                    <!-- Otras secciones de menú... -->
                 </div>
             </div>
 
+            <div class="column right-column">
+                <h2>Downstream</h2>
+                <div class="menu-container">
+                    <div class="menu-item" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Comercial</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
+                            <tr>
+                                <td onclick="openModalSabComer()">Plantilla de Datos Sabanon Comercial</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
     <footer class="footer">
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-content-wrapper">
-                <div class="column left-content">
-                    <img src="https://palmasbiweb.surge.sh/Img\Imagenes de fondo\1.jpg" alt="Descripción de la imagen">
-                </div>
-                <div class="column right-content">
-                    <p><strong></strong></p>
-                    <table>
-                        <tr>
-                            <td><strong>TIPO:</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Descripcion:</strong></td>
-                            <td></td> <!-- Puedes completar la descripción si tienes información específica -->
-                        </tr>
-                        <tr>
-                            <td><strong>Link:</strong></td>
-                            <td><a href="" target="_blank">Enlace</a></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Lider Reporte:</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Frecuencia:</strong></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <!-- Botón para abrir el chat -->
-        </div>
-    </div>
+    <button id="openChatButton"></button>
 
+    <!-- Iframe para el chat -->
+    <iframe id="chatIframe"
+        src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
+        frameborder="0"></iframe>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var menuItems = document.querySelectorAll('.menu-item');
@@ -136,9 +345,15 @@
                 });
             }
 
-            function toggleTable(menuItem) {
+            function toggleSubmenuItems(menuItem) {
                 var tableDetails = menuItem.nextElementSibling;
                 var isActive = menuItem.classList.contains('active');
+
+                // Ocultar todos los submenu-item antes de mostrar/ocultar
+                var submenuItems = menuItem.parentElement.querySelectorAll('.submenu-item');
+                submenuItems.forEach(function (submenuItem) {
+                    submenuItem.classList.add('hidden');
+                });
 
                 closeAllTables();
 
@@ -147,57 +362,27 @@
                     if (tableDetails && tableDetails.classList.contains('custom-table')) {
                         tableDetails.style.maxHeight = '1000px';
                         tableDetails.style.opacity = '1';
+
+                        // Mostrar los submenu-item correspondientes
+                        var submenuItemsToShow = menuItem.querySelectorAll('.submenu-item');
+                        submenuItemsToShow.forEach(function (submenuItem) {
+                            submenuItem.classList.remove('hidden');
+                        });
                     }
                 }
             }
 
+            function handleMenuItemClick(event) {
+                var menuItem = event.currentTarget;
+                toggleSubmenuItems(menuItem);
+            }
+
             menuItems.forEach(function (menuItem) {
-                menuItem.addEventListener('click', function () {
-                    toggleTable(menuItem);
-                });
+                menuItem.addEventListener('click', handleMenuItemClick);
             });
-
-            // Agregar evento de clic a las filas de la tabla para abrir el modal
-            var tableRows = document.querySelectorAll('.custom-table tr');
-
-            tableRows.forEach(function (row) {
-                row.addEventListener('click', function () {
-                    var reportId = row.getAttribute('data-id'); // Obtener el identificador único desde el atributo de datos
-                    openModal(reportId);
-                });
-            });
-
-            // Método para abrir el modal con datos de la API
-            function openModal(reportId) {
-                var apiUrl = 'https://webpalmasapis.azurewebsites.net/api/ListadoSabanaPorNombreReporte/' + encodeURIComponent(reportId);
-
-                var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4) {
-                        if (xhr.status === 200) {
-                            var data = JSON.parse(xhr.responseText);
-                            updateModalContent(data);
-                        } else {
-                            console.error('Error al obtener datos de la API. Estado:', xhr.status);
-                        }
-                    }
-                };
-
-                xhr.open('GET', apiUrl, true);
-                xhr.send();
-            }
-
-            function updateModalContent(data) {
-                // Implementar la lógica para actualizar el contenido del modal con los datos obtenidos
-                // Puedes acceder a los elementos del modal y establecer su contenido según los datos recibidos
-            }
-
-            function closeModal() {
-                // Implementar la lógica para cerrar el modal
-            }
-
         });
     </script>
+
 </body>
 
 </html>
