@@ -9,7 +9,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Css\prueba.css">
+    <link rel="stylesheet" href="D:\PlantillasProyectoPaginaBi\PaginaWeb/Css\prueba.css">
 
     <style>
         #openChatButton {
@@ -27,24 +27,24 @@
             bottom: 9px;
             right: 20px;
             z-index: 999;
-            background: url('https://palmasvision360web.azurewebsites.net/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+            background: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Carrusel/Chatbot.png') center/cover no-repeat;
 
         }
 
         #openChatButton.opened {
-            background: url('https://palmasvision360web.azurewebsites.net/Img/Chatbot/20.png') center/contain no-repeat;
+            background: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Chatbot/20.png') center/contain no-repeat;
             background-size: 170%;
         }
 
         #openChatButton.closed {
 
-            background: url('https://palmasvision360web.azurewebsites.net/Img/Carrusel/Chatbot.png') center/cover no-repeat;
+            background: url('D:\PlantillasProyectoPaginaBi\PaginaWeb\Img/Carrusel/Chatbot.png') center/cover no-repeat;
         }
     </style>
 </head>
 
 <body style="
-background-image: url('https://palmasvision360web.azurewebsites.net/Img/Imagenes de fondo/3.jpg');
+background-image: url('D:/PlantillasProyectoPaginaBi/PaginaWeb/Img/Imagenes de fondo/3.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -55,21 +55,26 @@ overflow-x: hidden;
 overflow-y: hidden;
 ">
 
+    <div class="loading-overlay">
+        <div class="loading-image">
+            <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img/Logos PNG/Logo Grupo Palmas-03.png" />
+        </div>
+    </div>
 
     <!-- Encabezado transparente -->
     <header class="header">
-        <a href="https://palmasvision360web.azurewebsites.net/index.html">
+        <a href="D:\PlantillasProyectoPaginaBi\PaginaWeb\index.html">
             <div id="logoContainer">
-                <img src='https://palmasvision360web.azurewebsites.net/Img/Logos PNG/Logo Grupo Palmas-03.png' alt='Logo'>
+                <img src='D:\PlantillasProyectoPaginaBi\PaginaWeb\Img/Logos PNG/Logo Grupo Palmas-03.png' alt='Logo'>
             </div>
         </a>
         <nav>
             <ul>
-                <li><a href="https://palmasvision360web.azurewebsites.net/index.html">Inicio</a></li>
-                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuReporte.html">Reportes</a></li>
-                <li><a id="inicio" href="https://palmasvision360web.azurewebsites.net/Html\MenuSabana.html">Sabanas</a></li>
-                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuNprint.html">Nprinting</a></li>
-                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuCelular.html">Celular</a></li>
+                <li><a href="D:\PlantillasProyectoPaginaBi\PaginaWeb\index.html">Inicio</a></li>
+                <li><a href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Html\MenuReporte.html">Reportes</a></li>
+                <li><a id="inicio" href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Html\MenuSabana.html">Sabanas</a></li>
+                <li><a href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Html\MenuNprint.html">Nprinting</a></li>
+                <li><a href="D:\PlantillasProyectoPaginaBi\PaginaWeb\Html\MenuCelular.html">Celular</a></li>
             </ul>
         </nav>
     </header>
@@ -85,7 +90,7 @@ overflow-y: hidden;
                         </h2>
                     </div>
                 </div>
-                <img id="imgReport" src="https://palmasvision360web.azurewebsites.net/Img\Carrusel\2.png"
+                <img id="imgReport" src="D:\PlantillasProyectoPaginaBi\PaginaWeb\Img\Carrusel\2.png"
                     alt="Descripción de la imagen">
             </div>
 
@@ -101,13 +106,13 @@ overflow-y: hidden;
                     <div class="custom-table">
                         <table>
                             <tr>
-                                <td onclick="openModal('myModal', 'Produccion')">
+                                <td onclick="openModal('myModal', 'Producción')">
                                     Produccion
                                 </td>
                             </tr>
                             <tr>
                                 <td onclick="openModal('myModal', 'Productividad')">
-                                    Produccion
+                                    Productividad
                                 </td>
                             </tr>
                             <tr>
@@ -150,22 +155,15 @@ overflow-y: hidden;
                         </table>
                     </div>
 
-
                     <div class="menu-item" onclick="toggleSubMenu(this)">
                         <div class="menu-dropdown">
                             <a>ATC</a>
                         </div>
                     </div>
 
-                    <div class="submenu-item hidden" onclick="toggleTable(this)">
+                    <div class="submenu-item" id="palmawasi" style="display: none" onclick="toggleTable(this)">
                         <div class="menu-dropdown">
                             <a>Palmawasi</a>
-                        </div>
-                    </div>
-
-                    <div class="submenu-item hidden" onclick="toggleTable(this)">
-                        <div class="menu-dropdown">
-                            <a>Shanusi</a>
                         </div>
                     </div>
 
@@ -173,92 +171,103 @@ overflow-y: hidden;
                         <table>
                             <!--PALMAWASI-->
                             <tr>
-                                <td onclick="openModal('myModal', 'Panel de Control ATCM')">
+                                <td onclick="openModal('myModal', 'Panel de Control ATCM - PW')">
                                     Panel de Control ATCM </td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Programa anual CTE')">
+                                <td onclick="openModal('myModal', 'Programa anual CTE - PW')">
                                     Programa anual CTE </td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Horometro y Km de UT')">
+                                <td onclick="openModal('myModal', 'Horometro y Km de UT - PW')">
                                     Horometro y Km de UT</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Documentacion Flota ATCM')">
+                                <td onclick="openModal('myModal', 'Documentación de Flota de ATCM - PW')">
                                     Documentacion Flota ATCM </td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento')">
+                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento - PW')">
                                     Reporte de Mantenimiento</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Avance Mtto de Carreteras')">
+                                <td onclick="openModal('myModal', 'Avance de mtto. de carreteras - PW')">
                                     Avance Mtto de Carreteras</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Avance Mtto de Alcantarillas')">
+                                <td onclick="openModal('myModal', 'Avance de mtto. de alcantarillas - PW')">
                                     Avance Mtto de Alcantarillas</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Avance Mtto de Drenajes')">
+                                <td onclick="openModal('myModal', 'Avance de mtto. de drenajes - PW')">
                                     Avance Mtto de Drenajes</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Gastos Fijos')">
+                                <td onclick="openModal('myModal', 'Gastos Fijos - PW')">
                                     Gastos Fijos</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Gastos de Venta')">
+                                <td onclick="openModal('myModal', 'Gastos de Venta - PW')">
                                     Gastos de Venta</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Gastos RRSS')">
+                                <td onclick="openModal('myModal', 'Gastos en Transporte RR.SS - PW')">
                                     Gastos RRSS</td>
                             </tr>
+                        </table>
+                    </div>
+
+                    <div class="submenu-item" id="shanusi" style="display: none" onclick="toggleTable(this)">
+                        <div class="menu-dropdown">
+                            <a>Shanusi</a>
+                        </div>
+                    </div>
+
+                    <div class="custom-table">
+                        <table>
                             <!--SH-->
                             <tr>
-                                <td onclick="openModal('myModal', 'HH Tecnicos')">
+                                <td onclick="openModal('myModal', 'HH técnicos - SH')">
                                     HH Tecnicos</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Rendimiento de Flotas')">
+                                <td onclick="openModal('myModal', 'Rendimiento de Flotas - SH')">
                                     Rendimiento de Flotas</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Pedidos y Servicios ATC')">
+                                <td onclick="openModal('myModal', 'Seguimiento pedidos y servicios ATC - SH')">
                                     Pedidos y Servicios ATC</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Documentacion Flota ATCM')">
+                                <td onclick="openModal('myModal', 'Documentación de Flota de ATCM - SH')">
                                     Documentacion Flota ATCM </td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento')">
+                                <td onclick="openModal('myModal', 'Reporte de Mantenimiento - SH')">
                                     Reporte de Mantenimiento</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Avance Mtto de Carreteras')">
+                                <td onclick="openModal('myModal', 'Avance de mtto. de carreteras - SH')">
                                     Avance Mtto de Carreteras</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Avance Mtto de Alcantarillas')">
+                                <td onclick="openModal('myModal', 'Avance de mtto. de alcantarillas - SH')">
                                     Avance Mtto de Alcantarillas</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Avance Mtto de Drenajes')">
+                                <td onclick="openModal('myModal', 'Avance de mtto. de drenajes - SH')">
                                     Avance Mtto de Drenajes</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Gastos Fijos')">
+                                <td onclick="openModal('myModal', 'Gastos Fijos - SH')">
                                     Gastos Fijos</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Gastos de Venta')">
+                                <td onclick="openModal('myModal', 'Gastos de Venta - SH')">
                                     Gastos de Venta</td>
                             </tr>
                             <tr>
-                                <td onclick="openModal('myModal', 'Gastos RRSS')">
+                                <td onclick="openModal('myModal', 'Gastos en Transporte RR.SS - SH')">
                                     Gastos RRSS</td>
                             </tr>
                         </table>
@@ -273,13 +282,8 @@ overflow-y: hidden;
                     <div class="custom-table">
                         <table>
                             <tr>
-                                <td onclick="openModalAgro()">Sabana De Datos Agro</td>
-                            </tr>
-                            <tr>
-                                <td onclick="openModalATC()">Datos-Sabana ATC</td>
-                            </tr>
-                            <tr>
-                                <td onclick="openModalTEA()">Sabana TEA</td>
+                                <td onclick="openModal('myModal', 'Sabana TEA')">
+                                    Sabana TEA</td>
                             </tr>
                         </table>
                     </div>
@@ -292,7 +296,8 @@ overflow-y: hidden;
                     <div class="custom-table">
                         <table>
                             <tr>
-                                <td onclick="openModalMatPrimas()">Sabana Materias Primas</td>
+                                <td onclick="openModal('myModal', 'Materias Primas')">
+                                    Sabana Materias Primas</td>
                             </tr>
                         </table>
                     </div>
@@ -311,7 +316,8 @@ overflow-y: hidden;
                     <div class="custom-table">
                         <table>
                             <tr>
-                                <td onclick="openModalSabComer()">Plantilla de Datos Sabanon Comercial</td>
+                                <td onclick="openModal('myModal', 'Plantilla de Datos Sabanon Comercial')">
+                                    Plantilla de Datos Sabanon Comercial</td>
                             </tr>
                         </table>
                     </div>
@@ -324,6 +330,43 @@ overflow-y: hidden;
         <p>CENTRALIZANDO SABERES, POTENCIANDO RESULTADOS</p>
     </footer>
 
+    <div id="myModalSabCom" class="modal modal-sab-com">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalSabComer()"></span>
+            <div class="modal-content-wrapper">
+                <!-- <div class="column left-content">
+                    <img src="D:\PlantillasProyectoPaginaBi\PaginaWeb\PaginaWeb\Img\Reportes Capturas\Plantilla de Datos Sabanon Comercial.jpeg" alt="Descripción de la imagen">
+                </div>-->
+                <div class="column right-content">
+                    <p><strong>Plantilla de Datos Sabanon Comercial</strong></p>
+                    <p><strong>Tipo:</strong> Operativo</p>
+                    <p><strong>Descripcion:</strong> Se muestra la información en forma tabular de las principales KPIS
+                        del área
+                        Comercial
+                        en
+                        S/. TM vs PB y PVO</p>
+                    <p><strong>Usuario líder:</strong> Henry</p>
+                    <p><strong>Frecuencia:</strong> Diario</p>
+                    <p><strong>Manual:</strong> <a href="#">Descargar</a></p>
+                    <p><strong>Link: </strong> <a
+                            href="https://qliksense.gruporomero.com.pe/azure/sense/app/e0bacbf5-9d16-4b7b-abad-1a2d15db9cee/overview"
+                            target="_blank">Enlace</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal modal-bck">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <div class="modal-content-wrapper">
+                <div class="column right-content">
+                    <!-- El contenido dinámico se agregará aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <button id="openChatButton"></button>
 
     <!-- Iframe para el chat -->
@@ -331,8 +374,188 @@ overflow-y: hidden;
         src="https://web.powerva.microsoft.com/environments/Default-5726fb42-8426-4577-9964-f13a62ad5eb9/bots/cr794_palmitoBi/webchat?__version__=2"
         frameborder="0"></iframe>
     <script>
+        var isModalOpen = false;
+
+        function openAndFillModal(modalId, apiEndpoint, itemName) {
+            // Obtén el modal y su contenedor
+            if (!isModalOpen) {
+                // Marcamos que el modal está abierto
+                isModalOpen = true;
+
+                // Obtén el modal y su contenedor
+                var modal = document.getElementById(modalId);
+                var modalContainer = modal.querySelector('.modal-content-wrapper');
+                var closeModalButton = modal.querySelector('.close');
+                // Limpia el contenido anterior del contenedor
+                modalContainer.innerHTML = '';
+
+                var apiUrl = apiEndpoint + itemName
+                // Hace la llamada a la API para obtener los datos
+                // Aquí deberías usar tu método o función para hacer la llamada a la API
+                // y manejar la respuesta de la API
+                // Puedes usar fetch o cualquier librería que prefieras para hacer llamadas AJAX
+                // En este ejemplo, supongamos que `fetch` devuelve una promesa con la respuesta JSON
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Crea elementos HTML con los datos obtenidos de la API
+                        var itemNameElement = document.createElement('p');
+
+                        var otherDataElements = document.createElement('div');
+                        otherDataElements.innerHTML = `
+                        <p><strong>${data[0].NombreReporte}</strong></p>
+                        <br>
+                        <p><strong>Tipo:</strong> ${data[0].Tipo_OpEst}</p>
+                        <p><strong>Descripcion:</strong> ${data[0].Descripcion}</p>
+                        <p><strong>Usuario líder:</strong> ${data[0].LiderReporte}</p>
+                        <p><strong>Frecuencia:</strong> ${data[0].Frecuencia}</p>
+                        <p><strong>Link:</strong> <a href="${data[0].Link}" target="_blank">Enlace</a></p>
+                        <!-- Agrega más datos según sea necesario -->`;
+
+                        // Añade los elementos creados al contenedor del modal
+                        modalContainer.appendChild(otherDataElements);
+
+                        // Muestra el modal
+                        modal.style.display = 'block';
+
+                        // Agregar la clase 'show' después de un breve retraso
+                        setTimeout(function () {
+                            modal.classList.add('show');
+                        }, 190);
+
+                        var closeButton = modal.querySelector('.close');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', function () {
+                                closeModal();
+                            });
+                        }
+
+                        modal.addEventListener('click', function (event) {
+                            if (event.target === modal) {
+                                closeModal();
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener datos de la API:', error);
+                    });
+            }
+        }
+        // Función para abrir el modal con un nombre específico
+        function openModal(modalId, itemName) {
+            openAndFillModal(
+                modalId,
+                'http://localhost:8080/api/ListadoSabanaPorNombreReporte/',
+                itemName
+            );
+        }
+
+        function closeModal() {
+            // Marcamos que el modal está cerrado
+            isModalOpen = false;
+
+            var modal = document.getElementById('myModal');
+            modal.classList.remove('show');
+            // Agrega un pequeño retraso antes de ocultar completamente el modal
+            setTimeout(function () {
+                modal.style.display = 'none';
+            }, 100); // 300 milisegundos (ajusta según sea necesario)
+        }
+
+        function toggleSubMenu() {
+            var palmawasi = document.getElementById("palmawasi");
+            var shanusi = document.getElementById("shanusi");
+
+            // Toggle para mostrar/ocultar
+            palmawasi.style.display = (palmawasi.style.display === 'none') ? 'block' : 'none';
+            shanusi.style.display = (shanusi.style.display === 'none') ? 'block' : 'none';
+        }
+
+        function openModalATC() {
+            var modal = document.getElementById('myModalAtc');
+            modal.style.display = 'block';
+
+            // Agregar la clase 'show' después de un breve retraso
+            setTimeout(function () {
+                modal.classList.add('show');
+            }, 300);
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalATC();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalATC();
+                }
+            });
+        }
+
+        function closeModalATC() {
+            var modal = document.getElementById('myModalAtc');
+            modal.classList.remove('show');
+            // Agrega un pequeño retraso antes de ocultar completamente el modal
+            setTimeout(function () {
+                modal.style.display = 'none';
+            }, 200); // 300 milisegundos (ajusta según sea necesario)
+        }
+
+        function openModalAgro() {
+            var modal = document.getElementById('myModalAgro');
+            modal.style.display = 'block';
+
+            setTimeout(function () {
+                modal.classList.add('show');
+            }, 300);
+
+
+            var closeButton = modal.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function () {
+                    closeModalAgro();
+                });
+            }
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalAgro();
+                }
+            });
+        }
+
+        function closeModalAgro() {
+            var modal = document.getElementById('myModalAgro');
+            modal.classList.remove('show');
+            // Agrega un pequeño retraso antes de ocultar completamente el modal
+            setTimeout(function () {
+                modal.style.display = 'none';
+            }, 200);
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
-            var menuItems = document.querySelectorAll('.menu-item');
+            var loadingOverlay = document.querySelector('.loading-overlay');
+            var loadingImage = document.querySelector('.loading-image');
+
+            loadingOverlay.style.opacity = 1;  // Mantén la opacidad en 1 para que la pantalla de carga sea visible
+            setTimeout(function () {
+                loadingOverlay.style.opacity = 0;  // Después de 10 segundos (o el tiempo que desees), oculta la pantalla de carga
+                setTimeout(function () {
+                    loadingOverlay.style.display = 'none';
+                    document.body.classList.remove('.loading-overlay');  // Elimina la clase 'loading' después de ocultar la pantalla de carga
+                }, 800);  // Agrega un tiempo adicional si es necesario para asegurarte de que la opacidad llegue a cero antes de eliminar la clase
+            }, 2000);
+
+            loadingImage.style.display = 'block';
+
+            // Ocultar la imagen después de cierto tiempo (puedes ajustar el tiempo según tus necesidades)
+            setTimeout(function () {
+                loadingImage.style.display = 'none';
+            }, 2000);
+
+            var menuItems = document.querySelectorAll('.menu-item, .submenu-item');
 
             function closeAllTables() {
                 menuItems.forEach(function (menuItem) {
@@ -345,15 +568,9 @@ overflow-y: hidden;
                 });
             }
 
-            function toggleSubmenuItems(menuItem) {
+            function toggleTable(menuItem) {
                 var tableDetails = menuItem.nextElementSibling;
                 var isActive = menuItem.classList.contains('active');
-
-                // Ocultar todos los submenu-item antes de mostrar/ocultar
-                var submenuItems = menuItem.parentElement.querySelectorAll('.submenu-item');
-                submenuItems.forEach(function (submenuItem) {
-                    submenuItem.classList.add('hidden');
-                });
 
                 closeAllTables();
 
@@ -362,27 +579,57 @@ overflow-y: hidden;
                     if (tableDetails && tableDetails.classList.contains('custom-table')) {
                         tableDetails.style.maxHeight = '1000px';
                         tableDetails.style.opacity = '1';
-
-                        // Mostrar los submenu-item correspondientes
-                        var submenuItemsToShow = menuItem.querySelectorAll('.submenu-item');
-                        submenuItemsToShow.forEach(function (submenuItem) {
-                            submenuItem.classList.remove('hidden');
-                        });
                     }
                 }
             }
 
-            function handleMenuItemClick(event) {
-                var menuItem = event.currentTarget;
-                toggleSubmenuItems(menuItem);
+            menuItems.forEach(function (menuItem) {
+                menuItem.addEventListener('click', function () {
+                    toggleTable(menuItem);
+                });
+            });
+
+            // Agrega un evento de clic al documento para cerrar el chat al hacer clic fuera del iframe y del botón
+            document.addEventListener('click', function (event) {
+                var chatIframe = document.getElementById('chatIframe');
+                var openChatButton = document.getElementById('openChatButton');
+
+                // Verificar si se hizo clic fuera del iframe y del botón
+                if (event.target !== chatIframe && event.target !== openChatButton) {
+                    // Ocultar el iframe y cambiar la imagen del botón
+                    chatIframe.style.display = 'none';
+                    openChatButton.classList.remove('opened');
+                    openChatButton.classList.add('closed');
+                }
+            });
+
+            function openChat() {
+                var chatIframe = document.getElementById('chatIframe');
+                var openChatButton = document.getElementById('openChatButton');
+
+                // Verificar el estado actual del iframe
+                if (chatIframe.style.display === 'block') {
+                    // Si está visible, ocultarlo y cambiar la imagen del botón
+                    chatIframe.style.display = 'none';
+                    openChatButton.classList.remove('opened');
+                    openChatButton.classList.add('closed');
+                } else {
+                    // Si está oculto, mostrarlo y cambiar la imagen del botón
+                    chatIframe.style.display = 'block';
+                    openChatButton.classList.remove('closed');
+                    openChatButton.classList.add('opened');
+                }
             }
 
-            menuItems.forEach(function (menuItem) {
-                menuItem.addEventListener('click', handleMenuItemClick);
-            });
+            // Modificar el evento de clic para abrir/cerrar el chat
+            var openChatButton = document.getElementById('openChatButton');
+            if (openChatButton) {
+                openChatButton.addEventListener('click', function () {
+                    openChat();
+                });
+            }
         });
     </script>
-
 </body>
 
 </html>

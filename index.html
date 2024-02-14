@@ -63,6 +63,7 @@
             src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamlight-font.otf') format('truetype');
         }
     </style>
+
 </head>
 
 <body style="
@@ -73,6 +74,7 @@
     margin: 0;
     overflow-x: hidden;
 ">
+
     <div class="loading-overlay">
         <div class="loading-image">
             <img src="https://palmasvision360web.azurewebsites.net/Img/Logos PNG/Logo Grupo Palmas-03.png" />
@@ -95,7 +97,7 @@
                 <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuReporte.html">Reportes</a></li>
                 <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuSabana.html">Sabanas</a></li>
                 <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuNprint.html">Nprinting</a></li>
-                <li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuCelular.html">Celular</a></li>
+                <!--<li><a href="https://palmasvision360web.azurewebsites.net/Html\MenuCelular.html">Celular</a></li>-->
             </ul>
         </nav>
     </header>
@@ -227,7 +229,25 @@
         frameborder="0"></iframe>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        function redirectToMobileOrWeb() {
+            // Obtener las dimensiones de la ventana
+            var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            // Definir el ancho de la pantalla a partir del cual se considera una pantalla móvil
+            var mobileScreenWidth = 360;
+
+            // URL de destino para dispositivos móviles
+            var mobileURL = "https://palmasvision360movil.azurewebsites.net/";
+
+            // Verificar si el ancho de la ventana es menor que el ancho definido para dispositivos móviles
+            if (windowWidth < mobileScreenWidth || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                // Redirigir a la URL móvil
+                window.location.href = mobileURL;
+            }
+        }
+
         window.addEventListener('load', function () {
+            redirectToMobileOrWeb();
 
             var loadingOverlay = document.querySelector('.loading-overlay');
             var loadingImage = document.querySelector('.loading-image');

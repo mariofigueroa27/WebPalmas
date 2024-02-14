@@ -9,11 +9,7 @@ body::before {
     z-index: -1;
 }
 
-.modal-atc,
-.modal-agro,
-.modal-tea,
-.modal-materias-primas,
-.modal-sab-com {
+.modal-bck {
     content: "";
     position: fixed;
     top: 0;

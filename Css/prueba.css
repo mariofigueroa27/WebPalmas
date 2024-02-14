@@ -9,11 +9,7 @@ body::before {
     z-index: -1;
 }
 
-.modal-atc,
-.modal-agro,
-.modal-tea,
-.modal-materias-primas,
-.modal-sab-com {
+.modal-bck {
     content: "";
     position: fixed;
     top: 0;
@@ -188,6 +184,9 @@ p {
 }
 
 .submenu-item {
+    margin-left: 2%;
+    width: 90%;
+    align-items: center;
     background-color: #E0CC00;
     padding: 10px;
     color: #fff;
@@ -195,15 +194,6 @@ p {
     cursor: pointer;
     text-align: start;
     font-weight: bold;
-}
-
-/* Agrega la clase hidden para ocultar los submenu-item inicialmente */
-.hidden {
-    display: none;
-}
-
-.menu-dropdown-content a:hover {
-    background-color: #005a00;
 }
 
 .menu-item.active .menu-dropdown-content {
@@ -374,7 +364,7 @@ ul {
 }
 
 .menu-item.active .custom-table {
-    max-height: 10px;
+    max-height: 1000px;
     /* Altura máxima de la tabla al estar activa */
     height: 20px;
     /* Altura máxima de la tabla al estar activa */
@@ -485,4 +475,62 @@ td:hover {
     src: url('https://palmasvision360web.azurewebsites.net/Fonts/gothamlight-font.otf') format('truetype');
     /* Ajusta la ruta y el formato según tu archivo de fuente */
     /* Puedes agregar otros formatos como woff, woff2, etc., para compatibilidad con navegadores */
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 1s;
+}
+
+.loading-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Ajusta el tamaño y otros estilos según tus necesidades */
+}
+
+.loading-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'GothamBold', sans-serif;
+    margin-bottom: 20px;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.801);
+    border-radius: 50%;
+    border-top: 4px solid #8FB623;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .loading-overlay {
+    opacity: 0;
+    transition: opacity 0.5s;
 }
